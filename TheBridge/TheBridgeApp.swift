@@ -11,9 +11,9 @@ import SwiftUI
 struct TheBridgeApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                StartView()
-            }.navigationViewStyle(StackNavigationViewStyle())
+            NavigationStack {
+                StartView().navigationBarBackButtonHidden()
+            }
         }
     }
 }

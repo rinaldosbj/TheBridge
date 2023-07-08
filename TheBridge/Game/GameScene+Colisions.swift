@@ -76,7 +76,7 @@ extension GameScene {
             }
             player?.position = playerLastPosition
             player?.name = "player"
-            player?.physicsBody = SKPhysicsBody(rectangleOf: player!.size)
+            player?.physicsBody = SKPhysicsBody(circleOfRadius: (player?.size.width)!*0.7)
             player?.physicsBody?.allowsRotation = false
             player?.physicsBody?.affectedByGravity = true
             player?.physicsBody?.categoryBitMask =  ColisionTypes.player.rawValue
@@ -169,7 +169,7 @@ extension GameScene {
                 player = SKSpriteNode(imageNamed: "player6.run.left.f2")
                 player?.size = CGSize(width: 108, height: 158)
                 player?.position = lastPlayerPosition!
-                player?.physicsBody = SKPhysicsBody(rectangleOf: player!.size)
+                player?.physicsBody = SKPhysicsBody(circleOfRadius: (player?.size.width)!*0.7)
                 player?.physicsBody?.affectedByGravity = false
                 addChild(player!)
                 let spriteSheetBreaking = [

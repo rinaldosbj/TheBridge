@@ -6,7 +6,6 @@ struct PauseView: View {
     @AppStorage("volumeMusic") var volumeMusic: Double = 0.5
     @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
     @Environment(\.presentationMode) var presentation
-    var font = UIFont()
     
     var body: some View {
         GeometryReader{
@@ -20,7 +19,7 @@ struct PauseView: View {
                     
                     Text("Background sounds")
                         .foregroundColor(.white)
-                        .font(Font(font))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{
@@ -38,7 +37,7 @@ struct PauseView: View {
                     
                     Text("Sound effects")
                         .foregroundColor(.white)
-                        .font(Font(font))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{
@@ -62,7 +61,7 @@ struct PauseView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Back")
-                                .font(Font(font))
+                                .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
@@ -77,7 +76,7 @@ struct PauseView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Back to Menu")
-                                .font(Font(font))
+                                .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
@@ -96,8 +95,6 @@ struct PauseView: View {
         let cfURL = Bundle.main.url(forResource: "PixelifySans-Regular", withExtension: "otf")! as CFURL
 
         CTFontManagerRegisterFontsForURL(cfURL, CTFontManagerScope.process, nil)
-
-        font = UIFont(name: "PixelifySans-Regular", size:  60)!
     }
 }
 

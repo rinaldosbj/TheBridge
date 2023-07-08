@@ -3,8 +3,6 @@ import SwiftUI
 struct HelpView: View {
 
     @Environment(\.presentationMode) var presentation
-    var font = UIFont()
-    var fontS = UIFont()
     
     var body: some View {
         GeometryReader{
@@ -19,12 +17,12 @@ struct HelpView: View {
                 VStack {
                     Spacer()
                     Text("Help")
-                        .font(Font(font))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/10))
                         .foregroundColor(.white)
                         .minimumScaleFactor(0.01)
                         .padding(.top, geo.size.width/13)
                     Text("The Bridge is a platform game.\nIn the settings screen you can choose one of the control types, Buttons -recommended for IPad- or Joystick -recommended for Mac-.\nTo advance just go up in the direction of the signs, reflect, restart and enjoy the process.")
-                        .font(Font(fontS))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                         .foregroundColor(.white)
                         .minimumScaleFactor(0.01)
                         .padding(.top, -geo.size.width/13)
@@ -39,10 +37,12 @@ struct HelpView: View {
                             ZStack {
                                 Image("buttonBg")
                                     .resizable()
+                                    .frame(minWidth: 70,minHeight: 70)
                                 Text("X")
-                                    .font(Font(fontS))
+                                    .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                     .foregroundColor(.white)
                                     .minimumScaleFactor(0.01)
+                                    .frame(minWidth: 70,minHeight: 70)
                             }
                         }
                         .frame(width: geo.size.width/14, height: geo.size.height/10)
@@ -59,9 +59,6 @@ struct HelpView: View {
         let cfURL = Bundle.main.url(forResource: "PixelifySans-Regular", withExtension: "otf")! as CFURL
 
         CTFontManagerRegisterFontsForURL(cfURL, CTFontManagerScope.process, nil)
-        
-        font = UIFont(name: "PixelifySans-Regular", size:  80)!
-        fontS = UIFont(name: "PixelifySans-Regular", size:  45)!
     }
 }
 

@@ -16,6 +16,7 @@ struct NavigationUtil {
             return nil
         }
         if let navigationController = viewController as? UINavigationController {
+            navigationController.isNavigationBarHidden = true
             return navigationController
         }
         for childViewController in viewController.children {

@@ -1,6 +1,7 @@
 import SwiftUI
 import SpriteKit
 import AVFoundation
+import UIKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
         

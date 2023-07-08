@@ -174,7 +174,7 @@ extension GameScene {
                                 }
                                 player?.position = position
                                 player?.name = "player"
-                                player?.physicsBody = SKPhysicsBody(rectangleOf: player!.size)
+                                player?.physicsBody = SKPhysicsBody(circleOfRadius: (player?.size.width)!*0.7)
                                 player?.physicsBody?.allowsRotation = false
                                 player?.physicsBody?.affectedByGravity = true
                                 player?.physicsBody?.categoryBitMask =  ColisionTypes.player.rawValue
@@ -193,7 +193,7 @@ extension GameScene {
                                 maxSpeed = CGFloat(player!.size.height * 2.5)
                                 player?.position = position
                                 player?.name = "player"
-                                player?.physicsBody = SKPhysicsBody(rectangleOf: player!.size)
+                                player?.physicsBody = SKPhysicsBody(circleOfRadius: (player?.size.width)!*0.7)
                                 player?.physicsBody?.allowsRotation = false
                                 player?.physicsBody?.affectedByGravity = true
                                 player?.physicsBody?.categoryBitMask =  ColisionTypes.player.rawValue
@@ -241,7 +241,7 @@ extension GameScene {
                                     node.position.y = position.y + CGFloat(blockSize-fixFloor)-48
                                 }
                                 node.name = "finish"
-                                node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
+                                node.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: node.size.width + 4, height: node.size.height))
                                 node.physicsBody?.isDynamic = false
                                 node.physicsBody?.categoryBitMask =  ColisionTypes.finish.rawValue
                                 addChild(node)

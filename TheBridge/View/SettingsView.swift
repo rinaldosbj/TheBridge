@@ -7,8 +7,6 @@ struct SettingsView: View {
     @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
     @AppStorage("control") var control: Bool = false
     @Environment(\.presentationMode) var presentation
-    var font = UIFont()
-    var fontS = UIFont()
     
     var body: some View {
         GeometryReader{
@@ -22,7 +20,7 @@ struct SettingsView: View {
                     
                     Text("Background sounds")
                         .foregroundColor(.white)
-                        .font(Font(font))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{
@@ -40,7 +38,7 @@ struct SettingsView: View {
                     
                     Text("Sound effects")
                         .foregroundColor(.white)
-                        .font(Font(font))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{
@@ -66,9 +64,10 @@ struct SettingsView: View {
                                     Image("buttonBgWide")
                                         .resizable()
                                     Text("Buttons")
-                                        .font(Font(fontS))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
+                                        .frame(minHeight: 50)
                                 }
                             }
                             else {
@@ -77,9 +76,10 @@ struct SettingsView: View {
                                     Image("buttonBgWideDisable")
                                         .resizable()
                                     Text("Buttons")
-                                        .font(Font(fontS))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
+                                        .frame(minHeight: 50)
                                 }
                             }
                         }
@@ -95,9 +95,10 @@ struct SettingsView: View {
                                     Image("buttonBgWide")
                                         .resizable()
                                     Text("Joystick")
-                                        .font(Font(fontS))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
+                                        .frame(minHeight: 50)
                                 }
                             }
                             else {
@@ -106,9 +107,10 @@ struct SettingsView: View {
                                     Image("buttonBgWideDisable")
                                         .resizable()
                                     Text("Joystick")
-                                        .font(Font(fontS))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
+                                        .frame(minHeight: 50)
                                 }
                             }
                         }
@@ -124,7 +126,7 @@ struct SettingsView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Save")
-                                .font(Font(font))
+                                .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
@@ -143,9 +145,6 @@ struct SettingsView: View {
         let cfURL = Bundle.main.url(forResource: "PixelifySans-Regular", withExtension: "otf")! as CFURL
 
         CTFontManagerRegisterFontsForURL(cfURL, CTFontManagerScope.process, nil)
-
-        font = UIFont(name: "PixelifySans-Regular", size:  60)!
-        fontS = UIFont(name: "PixelifySans-Regular", size:  30)!
     }
 }
 
