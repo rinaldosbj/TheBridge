@@ -52,6 +52,7 @@
 		D3653A092A018E9000AC2CF2 /* fall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FB2A018E9000AC2CF2 /* fall.mp3 */; };
 		D3653A0A2A018E9000AC2CF2 /* leaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FC2A018E9000AC2CF2 /* leaves.mp3 */; };
 		D3653A0B2A018E9000AC2CF2 /* pant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FD2A018E9000AC2CF2 /* pant.mp3 */; };
+		D3AC5A372A5A1DA60027D392 /* Localizable.string in Resources */ = {isa = PBXBuildFile; fileRef = D3AC5A392A5A1DA60027D392 /* Localizable.string */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,9 @@
 		D36539FB2A018E9000AC2CF2 /* fall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fall.mp3; sourceTree = "<group>"; };
 		D36539FC2A018E9000AC2CF2 /* leaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = leaves.mp3; sourceTree = "<group>"; };
 		D36539FD2A018E9000AC2CF2 /* pant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pant.mp3; sourceTree = "<group>"; };
+		D3AC5A3B2A5A22A50027D392 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text; name = "pt-BR"; path = "pt-BR.lproj/Localizable.string"; sourceTree = "<group>"; };
+		D3AC5A3C2A5A24580027D392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text; name = Base; path = Base.lproj/Localizable.string; sourceTree = "<group>"; };
+		D3AC5A3D2A5A249C0027D392 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Localizable.string; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 		D365399B2A0181F800AC2CF2 /* TheBridge */ = {
 			isa = PBXGroup;
 			children = (
+				D3AC5A392A5A1DA60027D392 /* Localizable.string */,
 				D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */,
 				D36539BB2A01847B00AC2CF2 /* Game */,
 				D36539B62A01841C00AC2CF2 /* View */,
@@ -275,11 +280,12 @@
 			};
 			buildConfigurationList = D36539942A0181F800AC2CF2 /* Build configuration list for PBXProject "TheBridge" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = "pt-BR";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"pt-BR",
+				en,
 			);
 			mainGroup = D36539902A0181F800AC2CF2;
 			productRefGroup = D365399A2A0181F800AC2CF2 /* Products */;
@@ -320,6 +326,7 @@
 				D3653A0A2A018E9000AC2CF2 /* leaves.mp3 in Resources */,
 				D3653A092A018E9000AC2CF2 /* fall.mp3 in Resources */,
 				D3653A052A018E9000AC2CF2 /* energy.mp3 in Resources */,
+				D3AC5A372A5A1DA60027D392 /* Localizable.string in Resources */,
 				D3653A032A018E9000AC2CF2 /* wings.mp3 in Resources */,
 				D36539E52A018E5800AC2CF2 /* level6.txt in Resources */,
 				D36539E72A018E5800AC2CF2 /* level7.txt in Resources */,
@@ -356,11 +363,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		D3AC5A392A5A1DA60027D392 /* Localizable.string */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D3AC5A3B2A5A22A50027D392 /* pt-BR */,
+				D3AC5A3C2A5A24580027D392 /* Base */,
+				D3AC5A3D2A5A249C0027D392 /* en */,
+			);
+			name = Localizable.string;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		D36539A52A0181F900AC2CF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -421,6 +442,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -477,11 +499,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TheBridge/Preview Content\"";
 				DEVELOPMENT_TEAM = B6XWN7H84M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Bridge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,7 +517,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy-rsbj.TheBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -511,11 +535,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"TheBridge/Preview Content\"";
 				DEVELOPMENT_TEAM = B6XWN7H84M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Bridge";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -527,7 +553,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy-rsbj.TheBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

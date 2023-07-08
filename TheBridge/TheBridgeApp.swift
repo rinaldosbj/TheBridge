@@ -12,7 +12,8 @@ struct TheBridgeApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                StartView().navigationBarBackButtonHidden()
+                StartView()
+                    .navigationBarBackButtonHidden()
             }
         }
     }
