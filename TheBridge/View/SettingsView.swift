@@ -20,7 +20,7 @@ struct SettingsView: View {
                     
                     Text("Background sounds")
                         .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{
@@ -38,7 +38,7 @@ struct SettingsView: View {
                     
                     Text("Sound effects")
                         .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{
@@ -64,7 +64,7 @@ struct SettingsView: View {
                                     Image("buttonBgWide")
                                         .resizable()
                                     Text("Buttons")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/18))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
                                         .frame(minHeight: 50)
@@ -76,7 +76,7 @@ struct SettingsView: View {
                                     Image("buttonBgWideDisable")
                                         .resizable()
                                     Text("Buttons")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/18))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
                                         .frame(minHeight: 50)
@@ -95,7 +95,7 @@ struct SettingsView: View {
                                     Image("buttonBgWide")
                                         .resizable()
                                     Text("Joystick")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/18))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
                                         .frame(minHeight: 50)
@@ -107,7 +107,7 @@ struct SettingsView: View {
                                     Image("buttonBgWideDisable")
                                         .resizable()
                                     Text("Joystick")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/18))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
                                         .frame(minHeight: 50)
@@ -126,7 +126,7 @@ struct SettingsView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Save")
-                                .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                                .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
