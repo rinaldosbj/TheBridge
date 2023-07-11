@@ -11,18 +11,17 @@ struct StartView: View {
         GeometryReader{
             geo in
             // Faz aqui dentro oq vai aparecer na tela
-            ZStack{
+            ZStack(alignment: .center){
                 Image("background1_1")
                     .resizable()
-                    .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()
                 Color(.black)
                     .ignoresSafeArea()
                     .opacity(0.6)
-                VStack{
+                VStack(alignment: .center){
                     Spacer().frame(height: geo.size.height/5)
-                    Text("The Bridge")
-                        .font(.custom("PixelifySans-Regular", size: geo.size.height/5))
+                    Text("Crossing over")
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/6.5))
                         .foregroundColor(.white)
                     
                     NavigationLink(destination: ContentView().navigationBarBackButtonHidden(true)) {
