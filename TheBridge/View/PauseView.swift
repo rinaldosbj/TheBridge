@@ -37,7 +37,7 @@ struct PauseView: View {
                     
                     Text("Sound effects")
                         .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
+                        .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
                         .multilineTextAlignment(.center)
                         .padding(.bottom,-geo.size.width/220)
                     HStack{

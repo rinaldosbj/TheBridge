@@ -20,7 +20,7 @@ struct StartView: View {
                     .opacity(0.6)
                 VStack(alignment: .center){
                     Spacer().frame(height: geo.size.height/5)
-                    Text("Crossing over")
+                    Text("The Bridge")
                         .font(.custom("PixelifySans-Regular", size: geo.size.height/6.5))
                         .foregroundColor(.white)
                     
