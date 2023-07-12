@@ -61,7 +61,7 @@ struct PauseView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Back")
-                                .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
+                                .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
@@ -76,7 +76,7 @@ struct PauseView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Back to Menu")
-                                .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
+                                .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
