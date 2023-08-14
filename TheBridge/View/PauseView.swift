@@ -32,7 +32,7 @@ struct PauseView: View {
                                      maxTrackColor: UIColor(named: "darkGray")!)
                         Image("music")
                     }
-                    .padding(.bottom,geo.size.width/30)
+                    .padding(.bottom,geo.size.width/40)
                     
                     
                     Text("Sound effects")

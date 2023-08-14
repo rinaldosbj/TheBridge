@@ -8,7 +8,7 @@ extension GameScene {
         
         timer = timer + 0.02
         
-        //      MARK: Player movement functions
+        // MARK: Player movement functions
         
         // Applies movement to the left if isMovingLeft is true
         if isMovinLeft && player!.physicsBody!.velocity.dx >= -maxSpeed {
@@ -49,7 +49,7 @@ extension GameScene {
             }
         }
         
-        //      MARK: Cloathing animations
+        // MARK: Cloathing animations
         
         if (cloathing != nil) {
             if !(cloathing!.hasActions()){
@@ -76,8 +76,8 @@ extension GameScene {
             }
         }
         
-        //      MARK: Level restricted stuff and Text Manegement
-        //      In general used for specific alterations
+        // MARK: Level restricted stuff and Text Manegement
+        //  In general used for specific alterations
         
         if level == 1 || level == 6 {
             if !textDidHappened {

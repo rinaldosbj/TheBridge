@@ -153,8 +153,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func willMove(from view: SKView) {
-        isMovinLeft = false
-        isMovinRight = false
+        cloathingAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        splashAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        backgroundAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        leavesAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        birdAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        breakAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        fallAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        energyAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        jumpAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        batAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        shirtAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
+        wingsAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
     }
     
     func setFont() {

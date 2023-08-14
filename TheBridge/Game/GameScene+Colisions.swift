@@ -47,6 +47,19 @@ extension GameScene {
         }
         
         if node.name == "clothing" {
+            canMove = false
+            canJump = false
+            
+            isAbleToLevelUp += 1
+            isMovinLeft = false
+            isMovinRight = false
+            isclickingJoystick = false
+            isJumping = false
+
+            player?.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            backJoystick?.position = CGPoint(x: self.frame.maxX-200, y: self.frame.minY+200)
+            buttonJoystick?.position = backJoystick?.position ?? CGPoint(x: 0, y: 0)
+            
             if clothes == 2 {
                 cloathingAudio = SKAudioNode(fileNamed: "pant.mp3")
                 cloathingAudio.autoplayLooped = false
@@ -83,16 +96,8 @@ extension GameScene {
             player?.physicsBody?.contactTestBitMask = ColisionTypes.floor.rawValue | ColisionTypes.water.rawValue | ColisionTypes.finish.rawValue | ColisionTypes.clothing.rawValue
             player!.lightingBitMask = 1
             addChild(player ?? SKSpriteNode())
-            node.removeFromParent()
             
-            isAbleToLevelUp += 1
-            isMovinLeft = false
-            isMovinRight = false
-            isclickingJoystick = false
-            isJumping = false
-            player?.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
-            backJoystick?.position = CGPoint(x: self.frame.maxX-200, y: self.frame.minY+200)
-            buttonJoystick?.position = backJoystick?.position ?? CGPoint(x: 0, y: 0)
+            node.removeFromParent()
             
             if level == 2 {
                 textDidHappened = false

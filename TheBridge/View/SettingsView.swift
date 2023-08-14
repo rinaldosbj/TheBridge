@@ -33,7 +33,7 @@ struct SettingsView: View {
                                      maxTrackColor: UIColor(named: "darkGray")!)
                         Image("music")
                     }
-                    .padding(.bottom,geo.size.width/30)
+                    .padding(.bottom,geo.size.width/40)
                     
                     
                     Text("Sound effects")
@@ -116,7 +116,7 @@ struct SettingsView: View {
                         }
                         .frame(width: geo.size.width/5.5, height: geo.size.height/14)
                     }
-                    .padding(.bottom,geo.size.width/30)
+                    .padding(.bottom,geo.size.width/60)
                     
                     Button (action: {
                         presentation.wrappedValue.dismiss()

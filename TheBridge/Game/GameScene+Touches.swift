@@ -159,7 +159,10 @@ extension GameScene{
             let location = touch.location(in: self)
             
             if textDidHappened {
-                
+                canMove = true
+                if !(level == 5 || level == 10){
+                    canJump = true
+                }
                 if !control {
                     if location.x >= leftButton!.frame.minX && location.x <= leftButton!.frame.maxX && location.y >= leftButton!.frame.minY && location.y <= leftButton!.frame.maxY && !(leftButton?.isHidden ?? false){
                         isMovinLeft = false
