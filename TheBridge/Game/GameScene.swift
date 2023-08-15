@@ -13,7 +13,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Used to change the Music volume
     @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
     // Used to change the Sound Effects volume
-    @AppStorage("control") var control: Bool = true
+    @AppStorage("control") var control: Bool = false
     // Used to define wich kind of control will be used
     @AppStorage("height") var appHeight: Double = 0.0
     

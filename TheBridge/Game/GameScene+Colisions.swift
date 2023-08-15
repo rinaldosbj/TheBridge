@@ -142,6 +142,9 @@ extension GameScene {
                     }
                 }
                 if level == 2 {
+                    canMove = false
+                    canJump = false
+                    textDidHappened = false
                     batAudio = SKAudioNode(fileNamed: "bat.mp3")
                     batAudio.autoplayLooped = false
                     addChild(batAudio)

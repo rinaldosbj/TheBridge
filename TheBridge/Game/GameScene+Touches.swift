@@ -125,7 +125,7 @@ extension GameScene{
                     if canMove {
                         if location.x < (backJoystick?.position.x)! + 150 && location.x > (backJoystick?.position.x)! - 150 {
                             buttonJoystick?.position.x = location.x
-                            if location.x < (backJoystick?.frame.midX)! {
+                            if location.x < ((backJoystick?.frame.midX)!-35) {
                                 if isMovinRight {
                                     player?.removeAllActions()
                                 }
@@ -135,7 +135,7 @@ extension GameScene{
                                     player?.run(.repeatForever(.animate(with: spriteSheetRunLeft, timePerFrame: 0.4)))
                                 }
                             }
-                            else if location.x > (backJoystick?.frame.midX)! {
+                            else if location.x > ((backJoystick?.frame.midX)!+35) {
                                 if isMovinLeft {
                                     player?.removeAllActions()
                                 }
@@ -143,6 +143,16 @@ extension GameScene{
                                 isMovinLeft = false
                                 if !(player?.hasActions())! {
                                     player?.run(.repeatForever(.animate(with: spriteSheetRunRight, timePerFrame: 0.4)))
+                                }
+                            }
+                            else {
+                                isMovinLeft = false
+                                isMovinRight = false
+                                player?.removeAllActions()
+                                player?.run(.animate(with: [SKTexture(imageNamed: "player\(clothes)")], timePerFrame: 1))
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) { [self] in
+                                    player?.removeAllActions()
+                                    player?.physicsBody?.velocity.dx = 0
                                 }
                             }
                         }
