@@ -14,13 +14,15 @@ struct TheBridgeApp: App {
             if #available(iOS 16.0, *) {
                 NavigationStack {
                     StartView()
-                }
+                }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .persistentSystemOverlays(.hidden)
             }
             else {
                 NavigationView {
                     StartView()
                 }
-                .navigationViewStyle(.stack)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .persistentSystemOverlays(.hidden)
             }
         }
     }

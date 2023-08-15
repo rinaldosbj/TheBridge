@@ -5,6 +5,7 @@ struct StartView: View {
     @AppStorage("volumeMusic") var volumeMusic: Double = 1.0
     @AppStorage("volumeEffects") var volumeEffects: Double = 1.0
     @AppStorage("showCredit") var showCredit: Bool = false
+    @AppStorage("height") var appHeight: Double = 0.0
     
     var body: some View {
         // if IPad has the current version updated
@@ -89,6 +90,7 @@ struct StartView: View {
             .onAppear() {
                 pause = false
                 showCredit = false
+                appHeight = geo.size.height
             }
         }
     }

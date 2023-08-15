@@ -29,23 +29,46 @@ extension GameScene {
         loadMap()
         
         if !control {
-            leftButton = SKSpriteNode(imageNamed: "leftButton")
-            leftButton?.size = CGSize(width: 200, height: 160)
-            leftButton?.position = CGPoint(x: self.frame.minX+120, y: self.frame.minY+96)
-            leftButton?.zPosition = 10
-            addChild(leftButton!)
-            
-            rightButton = SKSpriteNode(imageNamed: "rightButton")
-            rightButton?.size = CGSize(width: 200, height: 160)
-            rightButton?.position = CGPoint(x: self.frame.minX+360, y: self.frame.minY+96)
-            rightButton?.zPosition = 10
-            addChild(rightButton!)
-            
-            jumpButton = SKSpriteNode(imageNamed: "jumpButton")
-            jumpButton?.size = CGSize(width: 200, height: 160)
-            jumpButton?.position = CGPoint(x: self.frame.maxX-120, y: self.frame.minY+96)
-            jumpButton?.zPosition = 10
-            addChild(jumpButton!)
+            if appHeight > 600 {
+                // IPad
+                leftButton = SKSpriteNode(imageNamed: "leftButton")
+                leftButton?.size = CGSize(width: 200, height: 160)
+                leftButton?.position = CGPoint(x: self.frame.minX+120, y: self.frame.minY+96)
+                leftButton?.zPosition = 10
+                addChild(leftButton!)
+                
+                rightButton = SKSpriteNode(imageNamed: "rightButton")
+                rightButton?.size = CGSize(width: 200, height: 160)
+                rightButton?.position = CGPoint(x: self.frame.minX+360, y: self.frame.minY+96)
+                rightButton?.zPosition = 10
+                addChild(rightButton!)
+                
+                jumpButton = SKSpriteNode(imageNamed: "jumpButton")
+                jumpButton?.size = CGSize(width: 200, height: 160)
+                jumpButton?.position = CGPoint(x: self.frame.maxX-120, y: self.frame.minY+96)
+                jumpButton?.zPosition = 10
+                addChild(jumpButton!)
+            }
+            else {
+                // IPhone
+                leftButton = SKSpriteNode(imageNamed: "leftButton")
+                leftButton?.size = CGSize(width: 250, height: 210)
+                leftButton?.position = CGPoint(x: self.frame.minX+140, y: self.frame.minY+156)
+                leftButton?.zPosition = 10
+                addChild(leftButton!)
+                
+                rightButton = SKSpriteNode(imageNamed: "rightButton")
+                rightButton?.size = CGSize(width: 250, height: 210)
+                rightButton?.position = CGPoint(x: self.frame.minX+420, y: self.frame.minY+156)
+                rightButton?.zPosition = 10
+                addChild(rightButton!)
+                
+                jumpButton = SKSpriteNode(imageNamed: "jumpButton")
+                jumpButton?.size = CGSize(width: 250, height: 210)
+                jumpButton?.position = CGPoint(x: self.frame.maxX-150, y: self.frame.minY+156)
+                jumpButton?.zPosition = 10
+                addChild(jumpButton!)
+            }
         }
         else {
             backJoystick = SKSpriteNode(imageNamed: "backJoystick")

@@ -15,6 +15,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Used to change the Sound Effects volume
     @AppStorage("control") var control: Bool = true
     // Used to define wich kind of control will be used
+    @AppStorage("height") var appHeight: Double = 0.0
     
     var level = 1
     // Define the current level the payer is in
