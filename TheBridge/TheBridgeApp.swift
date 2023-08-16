@@ -11,19 +11,12 @@ import SwiftUI
 struct TheBridgeApp: App {
     var body: some Scene {
         WindowGroup {
-            if #available(iOS 16.0, *) {
-                NavigationStack {
-                    StartView()
-                }.frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .persistentSystemOverlays(.hidden)
+            NavigationView {
+                StartView()
             }
-            else {
-                NavigationView {
-                    StartView()
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .persistentSystemOverlays(.hidden)
-            }
+            .navigationViewStyle(.stack)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .persistentSystemOverlays(.hidden)
         }
     }
 }

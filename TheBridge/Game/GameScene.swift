@@ -106,6 +106,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var backgroundAtlas = [0,1,1,1,1,21,1,1,4,24,21]
     var backgroundTexture: [SKTexture]?
     var animationHappend = false
+    var isNotHappeningAnimation = true
     
     var cloathingAudio = SKAudioNode()
     var splashAudio = SKAudioNode()

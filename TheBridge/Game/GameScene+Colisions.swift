@@ -160,6 +160,7 @@ extension GameScene {
         
         if node.name == "bridge" {
             if cicle == 1 {
+                isNotHappeningAnimation = false
                 isMovinRight = false
                 isMovinLeft = false
                 isclickingJoystick = false

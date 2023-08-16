@@ -222,6 +222,7 @@ extension GameScene {
                                     textBg?.isHidden = false
                                     text?.isHidden = false
                                     downButton?.isHidden = false
+                                    isNotHappeningAnimation = true
                                 }
                             },
                         ]))
@@ -312,6 +313,7 @@ extension GameScene {
                 
             }
             if textNumber == 40 {
+                isNotHappeningAnimation = false
                 audioPlayer.play()
                 textNumber += 1
                 textDidHappened.toggle()
@@ -422,7 +424,7 @@ extension GameScene {
                         wings?.zPosition = 4
                         addChild(wings!)
                         player?.run(SKAction.moveTo(y: (player?.position.y)! + 2000, duration: 1))
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.1) { [self] in
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
                             self.whiteBall.removeFromParent()
                             self.removeChildren(in: self.children)
                             self.showCredit = true

@@ -7,6 +7,7 @@ struct StartView: View {
     @AppStorage("showCredit") var showCredit: Bool = false
     @AppStorage("height") var appHeight: Double = 0.0
     
+    
     var body: some View {
         // if IPad has the current version updated
         GeometryReader{
@@ -96,6 +97,8 @@ struct StartView: View {
     }
     
     init() {
+        UINavigationBar.setAnimationsEnabled(false)
+        
         let cfURL = Bundle.main.url(forResource: "PixelifySans-Regular", withExtension: "otf")! as CFURL
         
         CTFontManagerRegisterFontsForURL(cfURL, CTFontManagerScope.process, nil)
