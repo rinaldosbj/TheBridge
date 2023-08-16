@@ -15,10 +15,6 @@ extension GameScene{
             
             let location = touch.location(in: self)
             
-            // GOD MODE:
-//            player?.position = location
-            showCredit = true
-            
             if textDidHappened {
                 if isNotHappeningAnimation {
                     if !control {
