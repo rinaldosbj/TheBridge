@@ -75,6 +75,7 @@ extension GameScene {
             clothes += 1
             player?.removeFromParent()
             player = SKSpriteNode(imageNamed: "player\(clothes)")
+            player?.texture?.filteringMode = .nearest
             if clothes < 6 {
                 if level <= 2 {
                     player?.size = CGSize(width: 90, height: 140)
@@ -176,6 +177,7 @@ extension GameScene {
                 bg.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
                 addChild(bg)
                 player = SKSpriteNode(imageNamed: "player6.run.left.f2")
+                player?.texture?.filteringMode = .nearest
                 player?.size = CGSize(width: 108, height: 158)
                 player?.position = lastPlayerPosition!
                 player?.physicsBody = SKPhysicsBody(circleOfRadius: (player?.size.width)!*0.7)

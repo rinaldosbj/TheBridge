@@ -107,6 +107,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var backgroundTexture: [SKTexture]?
     var animationHappend = false
     var isNotHappeningAnimation = true
+    var gameStarted = false
     
     var cloathingAudio = SKAudioNode()
     var splashAudio = SKAudioNode()
@@ -139,10 +140,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.view?.isMultipleTouchEnabled = true
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [self] in
+            textSetup()
+            setupAudio()
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 11) { [self] in
+            gameStarted = true
+        }
         setFont()
         setup()
-        textSetup()
-        setupAudio()
         
         let urlString = Bundle.main.path(forResource: "energy", ofType: "mp3")
         do {

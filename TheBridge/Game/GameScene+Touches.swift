@@ -66,7 +66,9 @@ extension GameScene{
                 }
             }
             else {
-                textNumber += 1
+                if gameStarted {
+                    textNumber += 1
+                }
             }
         }
     }

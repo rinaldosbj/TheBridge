@@ -11,7 +11,7 @@ extension GameScene {
             backgroundTexture!.append(SKTexture(imageNamed: textureName))
         }
         background = SKSpriteNode(imageNamed: "background\(level)_1")
-        
+        background?.texture?.filteringMode = .nearest
         background?.size = self.size
         background?.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
         background?.lightingBitMask = 1
@@ -149,6 +149,7 @@ extension GameScene {
                         if letter == "x" {
                             // load wall
                             let node = SKSpriteNode(imageNamed: "platform\(level)")
+                            node.texture?.filteringMode = .nearest
                             node.position = position
                             node.position.y = position.y + CGFloat(blockSize/4)
                             node.size = CGSize(width: blockSize+3, height: blockSize/2)
@@ -177,6 +178,7 @@ extension GameScene {
                         }
                         else if letter == "p" {
                             player = SKSpriteNode(imageNamed: "player\(clothes)")
+                            player?.texture?.filteringMode = .nearest
                             if !(level == 1 && cicle == 2) {
                                 if clothes < 6 {
                                     if (level <= 2 || level >= 5) && !(level == 8 || level == 9) {
@@ -213,6 +215,7 @@ extension GameScene {
                                     SKTexture(imageNamed: "player\(clothes).fall1"),
                                     SKTexture(imageNamed: "player\(clothes).fall2")]
                                 player = SKSpriteNode(imageNamed: "player\(clothes)")
+                                player?.texture?.filteringMode = .nearest
                                 player?.size = CGSize(width: 108, height: 158)
                                 maxSpeed = CGFloat(player!.size.height * 2.5)
                                 player?.position = position
@@ -316,6 +319,7 @@ extension GameScene {
                             else {
                                 cloathing?.size = CGSize(width: 97.5, height: 97.5)
                             }
+                            cloathing?.texture?.filteringMode = .nearest
                             cloathing?.position = position
                             cloathing?.name = "clothing"
                             //                            cloathing?.lightingBitMask = 1
@@ -345,6 +349,7 @@ extension GameScene {
                         }
                         if letter == "T" {
                             let node = SKSpriteNode(color: .clear, size: CGSize(width: blockSize, height: blockSize))
+                            node.texture?.filteringMode = .nearest
                             node.position = position
                             node.physicsBody = SKPhysicsBody(rectangleOf: node.size)
                             node.physicsBody?.isDynamic = false
@@ -352,6 +357,7 @@ extension GameScene {
                         }
                         if letter == "t" {
                             let node = SKSpriteNode(color: .clear, size: CGSize(width: blockSize, height: blockSize))
+                            node.texture?.filteringMode = .nearest
                             node.position = position
                             node.name = "bridge"
                             node.physicsBody = SKPhysicsBody(rectangleOf: node.size)

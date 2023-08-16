@@ -67,7 +67,7 @@ extension GameScene {
                 cloathing2?.run(.repeatForever(sequence))
             }
         }
-        if !downButton!.isHidden {
+        if !(downButton?.isHidden ?? true) {
             if !(downButton!.hasActions()){
                 let scale = SKAction.scale(to: 1.21, duration: 1.5)
                 let scale2 = SKAction.scale(to: 1, duration: 1.5)
