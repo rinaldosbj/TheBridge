@@ -425,9 +425,9 @@ extension GameScene {
                         addChild(wings!)
                         player?.run(SKAction.moveTo(y: (player?.position.y)! + 2000, duration: 1))
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [self] in
+                            self.showCredit = true
                             self.whiteBall.removeFromParent()
                             self.removeChildren(in: self.children)
-                            self.showCredit = true
                         }
                     }
                 ]))
