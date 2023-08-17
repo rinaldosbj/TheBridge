@@ -17,15 +17,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Used to define wich kind of control will be used
     @AppStorage("height") var appHeight: Double = 0.0
     
-    var level = 10 /// 1
+    var level = 1
     // Define the current level the payer is in
-    var cicle = 2 /// 1
+    var cicle = 1
     // Define the current cicle the payer is in
     var textDidHappened: Bool = false
     // Used to control the text flow
     var textNumber = 0
     // Used to control the text flow
-    var clothes = 6 /// 1
+    var clothes = 1
     // Define the current clothes the payer is wearing
     var timer = 0.0
     // Used for limiting the interval of time that the player can jump
@@ -140,10 +140,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.view?.isMultipleTouchEnabled = true
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [self] in
             textSetup()
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + 11) { [self] in
             gameStarted = true
         }
         setupAudio()

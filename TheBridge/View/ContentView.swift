@@ -56,8 +56,8 @@ struct ContentView: View {
                                             positionAnimation = true
                                         }
                                     }
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 9.2) { [self] in
-                                        withAnimation(.easeInOut) {
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 8.5) { [self] in
+                                        withAnimation(.easeInOut(duration: 1)) {
                                             showStart = false
                                         }
                                     }
