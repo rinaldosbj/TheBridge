@@ -17,15 +17,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // Used to define wich kind of control will be used
     @AppStorage("height") var appHeight: Double = 0.0
     
-    var level = 1
+    var level = 10
     // Define the current level the payer is in
-    var cicle = 1
+    var cicle = 2
     // Define the current cicle the payer is in
     var textDidHappened: Bool = false
     // Used to control the text flow
-    var textNumber = 0
+    var textNumber = 39
     // Used to control the text flow
-    var clothes = 1
+    var clothes = 6
     // Define the current clothes the payer is wearing
     var timer = 0.0
     // Used for limiting the interval of time that the player can jump
