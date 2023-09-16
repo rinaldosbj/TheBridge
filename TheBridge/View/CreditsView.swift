@@ -23,7 +23,7 @@ struct CreditsView: View {
                             .minimumScaleFactor(0.01)
                         HStack {
                             Link(destination: URL(string: "https://www.instagram.com/rinaldo_sbj/")!, label: {
-                                Text("• Creation, Development and Art by Rinaldo da Silva Bento Junior")
+                                Text("Creator")
                                     .font(Font(.init(.system, size: geo.size.height/20)))
                                     .foregroundColor(.white)
                                     .padding(.top, geo.size.width/1000)
@@ -34,7 +34,7 @@ struct CreditsView: View {
                         }
                         HStack{
                             Link(destination: URL(string: "https://heltonyan.itch.io")!, label: {
-                                Text("• Sound efects by Helton Yan from itch.io")
+                                Text("SoundDesign")
                                     .font(Font(.init(.system, size: geo.size.height/20)))
                                     .foregroundColor(.white)
                                     .padding(.top, geo.size.width/1000)
@@ -45,7 +45,7 @@ struct CreditsView: View {
                         }
                         HStack{
                             Link(destination: URL(string: "https://fontesk.com/pixelify-sans-typeface/")!, label: {
-                                Text("• Custom font: PixelifySans-Regular by Stefie")
+                                Text("Font")
                                     .font(Font(.init(.system, size: geo.size.height/20)))
                                     .foregroundColor(.white)
                                     .padding(.top, geo.size.width/1000)
@@ -58,7 +58,7 @@ struct CreditsView: View {
                         
                         if !license {
                             HStack {
-                                Button("  Show license ↓", action: {license.toggle()})
+                                Button("License", action: {license.toggle()})
                                     .padding(.top,-geo.size.width/200)
                                     .font(Font(.init(.menuTitle, size: geo.size.height/24)))
                                     .foregroundColor(.gray)
@@ -88,7 +88,7 @@ struct CreditsView: View {
                             .minimumScaleFactor(0.01)
                             .padding(.top,geo.size.width/16)
                         
-                        Text("I would like to express my immense satisfaction in doing this game. Delivering it in such a short time and with so little experience, required a lot of effort and dedication. \nWell, my name is Rinaldo Junior, I am neither a designer or an experienced programmer, but like the character, I am on a journey of transformation. Throughout my life, I have faced many obstacles. Coming from a family without many privileges, I had many difficulty accessing a good education. After much effort and willpower from both me and my family, I managed to enter university, which was a great achievement. But after a while, I realized that what I was doing was not what I wanted, I was no longer enjoying the course, it was nothing like I imagined, and I really thought about giving up. \nHowever, last year when I entered the Apple Developer Academy, I discovered my passion for code. It was difficult, but with each attempt, I realized that it was really for me, it was what I wanted to do. At the beginning of this year, after much thought, I finally gathered the courage to start over. After more than three years studying Production Engineering, I talked to my family, dropped out of the course, and started my journey in Computer Science, my passion. It was a turning point, and now I feel like I am on the right path! I feel like I have found myself again. \nWhen I heard about the Student Challenge, I saw the opportunity to tell my story. I had the idea, but the problem was, I had never made a game alone. I even played around with drawing pixel art characters, but I had never done anything on such a large scale, and with so little time. But again, I gathered my strength and decided that I would not be satisfied until I delivered this game. It was really a huge mountain to climb, but it did not discourage me. After all, how many mountains have I already climbed?")
+                        Text(String(localized: "Declaration"))
                             .font(Font(.init(.menuTitle, size: geo.size.height/18)))
                             .foregroundColor(.white)
                             .lineLimit(10000)

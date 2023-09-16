@@ -236,7 +236,7 @@ extension GameScene {
                         canJump = true
                     }
                 }
-                text?.text = scrits.script[textNumber]
+                text?.text = String(localized: String.LocalizationValue(stringLiteral: scrits.script[textNumber]))
             }
         }
         else if level == 2 {
@@ -260,7 +260,7 @@ extension GameScene {
                     backJoystick?.position = CGPoint(x: self.frame.maxX-200, y: self.frame.minY+200)
                     buttonJoystick?.position = backJoystick!.position
                 }
-                text?.text = scrits.script[textNumber]
+                text?.text = String(localized: String.LocalizationValue(stringLiteral: scrits.script[textNumber]))
             }
         }
         else if level == 3 {
@@ -283,7 +283,7 @@ extension GameScene {
                     text?.isHidden = true
                     textNumber += 2
                 }
-                text?.text = scrits.script[textNumber]
+                text?.text = String(localized: String.LocalizationValue(stringLiteral: scrits.script[textNumber]))
             }
         }
         else if level == 5 {
@@ -302,12 +302,12 @@ extension GameScene {
                     buttonJoystick?.isHidden = false
                     canMove = true
                 }
-                text?.text = scrits.script[textNumber]
+                text?.text = String(localized: String.LocalizationValue(stringLiteral: scrits.script[textNumber]))
             }
         }
         
         if level == 10 {
-            text?.text = scrits.script[textNumber]
+            text?.text = String(localized: String.LocalizationValue(stringLiteral: scrits.script[textNumber]))
             if textNumber == 39 {
                 downButton?.isHidden = true
                 

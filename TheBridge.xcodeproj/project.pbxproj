@@ -52,7 +52,7 @@
 		D3653A092A018E9000AC2CF2 /* fall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FB2A018E9000AC2CF2 /* fall.mp3 */; };
 		D3653A0A2A018E9000AC2CF2 /* leaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FC2A018E9000AC2CF2 /* leaves.mp3 */; };
 		D3653A0B2A018E9000AC2CF2 /* pant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FD2A018E9000AC2CF2 /* pant.mp3 */; };
-		D3AC5A372A5A1DA60027D392 /* Localizable.string in Resources */ = {isa = PBXBuildFile; fileRef = D3AC5A392A5A1DA60027D392 /* Localizable.string */; };
+		D3C623752AB61B350014F1C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3C623772AB61B350014F1C9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,9 +102,8 @@
 		D36539FB2A018E9000AC2CF2 /* fall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fall.mp3; sourceTree = "<group>"; };
 		D36539FC2A018E9000AC2CF2 /* leaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = leaves.mp3; sourceTree = "<group>"; };
 		D36539FD2A018E9000AC2CF2 /* pant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pant.mp3; sourceTree = "<group>"; };
-		D3AC5A3B2A5A22A50027D392 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text; name = "pt-BR"; path = "pt-BR.lproj/Localizable.string"; sourceTree = "<group>"; };
-		D3AC5A3C2A5A24580027D392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text; name = Base; path = Base.lproj/Localizable.string; sourceTree = "<group>"; };
-		D3AC5A3D2A5A249C0027D392 /* en */ = {isa = PBXFileReference; lastKnownFileType = text; name = en; path = en.lproj/Localizable.string; sourceTree = "<group>"; };
+		D3C623762AB61B350014F1C9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D3C623782AB61B9A0014F1C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +136,7 @@
 		D365399B2A0181F800AC2CF2 /* TheBridge */ = {
 			isa = PBXGroup;
 			children = (
-				D3AC5A392A5A1DA60027D392 /* Localizable.string */,
+				D3C623772AB61B350014F1C9 /* Localizable.strings */,
 				D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */,
 				D36539BB2A01847B00AC2CF2 /* Game */,
 				D36539B62A01841C00AC2CF2 /* View */,
@@ -280,10 +279,9 @@
 			};
 			buildConfigurationList = D36539942A0181F800AC2CF2 /* Build configuration list for PBXProject "TheBridge" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = "pt-BR";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				Base,
 				"pt-BR",
 				en,
 			);
@@ -324,9 +322,9 @@
 				D3653A022A018E9000AC2CF2 /* water.mp3 in Resources */,
 				D36539E82A018E5800AC2CF2 /* level1.txt in Resources */,
 				D3653A0A2A018E9000AC2CF2 /* leaves.mp3 in Resources */,
+				D3C623752AB61B350014F1C9 /* Localizable.strings in Resources */,
 				D3653A092A018E9000AC2CF2 /* fall.mp3 in Resources */,
 				D3653A052A018E9000AC2CF2 /* energy.mp3 in Resources */,
-				D3AC5A372A5A1DA60027D392 /* Localizable.string in Resources */,
 				D3653A032A018E9000AC2CF2 /* wings.mp3 in Resources */,
 				D36539E52A018E5800AC2CF2 /* level6.txt in Resources */,
 				D36539E72A018E5800AC2CF2 /* level7.txt in Resources */,
@@ -364,14 +362,13 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D3AC5A392A5A1DA60027D392 /* Localizable.string */ = {
+		D3C623772AB61B350014F1C9 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D3AC5A3B2A5A22A50027D392 /* pt-BR */,
-				D3AC5A3C2A5A24580027D392 /* Base */,
-				D3AC5A3D2A5A249C0027D392 /* en */,
+				D3C623762AB61B350014F1C9 /* pt-BR */,
+				D3C623782AB61B9A0014F1C9 /* en */,
 			);
-			name = Localizable.string;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -517,7 +514,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy-rsbj.TheBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -553,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.1;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy-rsbj.TheBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

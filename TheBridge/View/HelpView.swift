@@ -21,7 +21,7 @@ struct HelpView: View {
                         .foregroundColor(.white)
                         .minimumScaleFactor(0.01)
                         .padding(.top, geo.size.width/13)
-                    Text("The Bridge is a platform game.\nIn the settings screen you can choose one of the control types, Buttons (recommended for IPad) or Joystick (recommended for IPhone or Mac).To advance in the game just go up in the direction of the signs, enjoy the process.")
+                    Text(String(localized: "Help_label"))
                         .font(Font(.init(.system, size: geo.size.height/12)))
                         .foregroundColor(.white)
                         .minimumScaleFactor(0.01)

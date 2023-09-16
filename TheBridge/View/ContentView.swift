@@ -9,7 +9,7 @@ struct ContentView: View {
     
     @AppStorage("showCredit") var showCredit: Bool = false
     @State var showChapter1 = true
-    @State var text1 = "Chapter 1"
+    @State var text1 = String(localized: "Chapter 1")
     @State var text1Animation = false
     @State var showCloseButton = false
     @State var text2 = "Fin."
@@ -99,7 +99,7 @@ struct ContentView: View {
                                 .onAppear{
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
                                         text1Animation = true
-                                        text1 = "The cave"
+                                        text1 = String(localized: "The cave")
                                     }
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 6) { [self] in
                                         showChapter1 = false
@@ -199,10 +199,10 @@ struct ContentView: View {
                                 .onAppear{
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [self] in
                                         text2Animation = true
-                                        text2 = "Chapter 2"
+                                        text2 = String(localized: "Chapter 2")
                                     }
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 6) { [self] in
-                                        text2 = "coming soon..."
+                                        text2 = String(localized: "coming soon...")
                                     }
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 7.5) { [self] in
                                         showCloseButton = true

@@ -267,16 +267,6 @@ extension GameScene {
                 waterDrop.run(SKAction.removeFromParent())
             }
             
-            //            let urlString = Bundle.main.path(forResource: "water", ofType: "m4a")
-            //            do {
-            //            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString!))
-            //                audioPlayer.volume = 2
-            //                audioPlayer.play()
-            //            }
-            //            catch{
-            //                print("Deu erro ae mané: \(error.localizedDescription)")
-            //            }
-            
             DispatchQueue.main.asyncAfter(deadline: .now() + 4.5) { [self] in
                 if level == 1 {
                     water = SKSpriteNode(color: .blue, size: CGSize(width: 10, height: 20))
