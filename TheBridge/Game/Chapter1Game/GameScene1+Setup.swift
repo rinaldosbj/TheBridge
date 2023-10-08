@@ -2,7 +2,7 @@ import SwiftUI
 import SpriteKit
 import AVFoundation
 
-extension GameScene {
+extension GameScene1 {
     
     func setup() {
         backgroundTexture = [SKTexture]()

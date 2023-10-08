@@ -11,7 +11,7 @@ enum ColisionTypes: UInt32 {
     case bridge = 32
 }
 
-extension GameScene {
+extension GameScene1 {
     
     func didBegin(_ contact: SKPhysicsContact) {
         guard let nodeA = contact.bodyA.node else {return}

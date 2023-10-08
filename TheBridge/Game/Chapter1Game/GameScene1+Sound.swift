@@ -1,7 +1,7 @@
 import SwiftUI
 import SpriteKit
 
-extension GameScene {
+extension GameScene1 {
     
     func setupAudio() {
         if !(cicle == 2 && level == 1) {

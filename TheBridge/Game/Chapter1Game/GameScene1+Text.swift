@@ -1,7 +1,7 @@
 import SwiftUI
 import SpriteKit
 
-extension GameScene {
+extension GameScene1 {
     
     func textSetup() {
         textBg = SKSpriteNode(imageNamed: "textbg")

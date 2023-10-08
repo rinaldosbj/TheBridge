@@ -2,7 +2,7 @@ import AVFoundation
 import SwiftUI
 import SpriteKit
 
-extension GameScene{
+extension GameScene1{
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch: UITouch in touches {

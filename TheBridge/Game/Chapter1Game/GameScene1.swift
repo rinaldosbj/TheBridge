@@ -3,7 +3,7 @@ import SpriteKit
 import AVFoundation
 import UIKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class GameScene1: SKScene, SKPhysicsContactDelegate {
         
     // MARK: Variables
     
