@@ -11,13 +11,17 @@
 "Credits" = "Credits";
 "Hello!" = "Hello!";
 "Start" = "Start";
+"Continue" = "Continue";
+"Restart" = "Restart";
 "Save" = "Save";
 "Back" = "Back";
 "Back to Menu" = "Back to Menu";
 "Buttons" = "Buttons";
 "Chapter 1" = "Chapter 1";
 "The cave" = "The cave";
+"field" = "The field";
 "Chapter 2" = "Chapter 2";
+"Chapter 3" = "Chapter 3";
 "coming soon..." = "coming soon...";
 "This is the story of this person." = "This is the story of this person.";
 "Person?" = "Person?";

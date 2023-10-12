@@ -102,7 +102,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     var whiteBall2 = SKSpriteNode(imageNamed: "circle")
     var whiteBall3 = SKSpriteNode(imageNamed: "circle")
     var whiteBall4 = SKSpriteNode(imageNamed: "circle")
-    @AppStorage("showCredit") var showCredit: Bool = false
+    @AppStorage("finishedChapter1") var finishedChapter1: Bool = false
     var backgroundAtlas = [0,1,1,1,1,21,1,1,4,24,21]
     var backgroundTexture: [SKTexture]?
     var animationHappend = false
@@ -137,16 +137,17 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     // MARK: GameScene fucntions
     
     override func didMove(to view: SKView){
+        
         self.view?.isMultipleTouchEnabled = true
         physicsWorld.contactDelegate = self
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
         DispatchQueue.main.asyncAfter(deadline: .now() + 10) { [self] in
             textSetup()
+            setupAudio()
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 11) { [self] in
             gameStarted = true
         }
-        setupAudio()
         setFont()
         setup()
         

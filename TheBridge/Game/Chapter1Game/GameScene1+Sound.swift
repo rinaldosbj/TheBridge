@@ -4,6 +4,7 @@ import SpriteKit
 extension GameScene1 {
     
     func setupAudio() {
+        
         if !(cicle == 2 && level == 1) {
             
             jumpAudio = SKAudioNode(fileNamed: "jump.mp3")
@@ -22,7 +23,6 @@ extension GameScene1 {
                 backgroundAudio = SKAudioNode(fileNamed: "cave.mp3")
                 backgroundAudio.autoplayLooped = true
                 addChild(backgroundAudio)
-                //            backgroundAudio.run(SKAction.play())
                 
                 if level == 1 {
                     splashAudio = SKAudioNode(fileNamed: "water.mp3")

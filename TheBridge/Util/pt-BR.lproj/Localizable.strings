@@ -11,13 +11,17 @@
 "Credits" = "Creditos";
 "Hello!" = "Olá!";
 "Start" = "Jogar";
+"Continue" = "Continuar";
+"Restart" = "Reiniciar";
 "Save" = "Salvar";
 "Back" = "Voltar";
 "Back to Menu" = "Voltar para o Menu";
 "Buttons" = "Botão";
 "Chapter 1" = "Capítulo 1";
 "The cave" = "A caverna";
+"field" = "O campo";
 "Chapter 2" = "Capítulo 2";
+"Chapter 3" = "Capítulo 3";
 "coming soon..." = "em breve...";
 "This is the story of this person." = "Essa é a história dessa pessoa";
 "Person?" = "Pessoa?";

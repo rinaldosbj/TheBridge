@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D365399D2A0181F800AC2CF2 /* TheBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */; };
-		D365399F2A0181F800AC2CF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365399E2A0181F800AC2CF2 /* ContentView.swift */; };
+		D365399F2A0181F800AC2CF2 /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365399E2A0181F800AC2CF2 /* ContentView1.swift */; };
 		D36539A12A0181F900AC2CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36539A02A0181F900AC2CF2 /* Assets.xcassets */; };
 		D36539A42A0181F900AC2CF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36539A32A0181F900AC2CF2 /* Preview Assets.xcassets */; };
 		D36539AB2A01834500AC2CF2 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539AA2A01834500AC2CF2 /* CreditsView.swift */; };
@@ -51,15 +51,18 @@
 		D3653A092A018E9000AC2CF2 /* fall.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FB2A018E9000AC2CF2 /* fall.mp3 */; };
 		D3653A0A2A018E9000AC2CF2 /* leaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FC2A018E9000AC2CF2 /* leaves.mp3 */; };
 		D3653A0B2A018E9000AC2CF2 /* pant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D36539FD2A018E9000AC2CF2 /* pant.mp3 */; };
-		D3721E1A2AD3460E00D00010 /* ContentViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3721E192AD3460E00D00010 /* ContentViewComponents.swift */; };
+		D3721E1A2AD3460E00D00010 /* ContentView1Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3721E192AD3460E00D00010 /* ContentView1Components.swift */; };
 		D3721E1C2AD3478800D00010 /* PausedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3721E1B2AD3478800D00010 /* PausedView.swift */; };
+		D38AABB42AD852E500EB1295 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AABB32AD852E500EB1295 /* ContentView2.swift */; };
+		D38AABB62AD8531300EB1295 /* ContentView2Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AABB52AD8531300EB1295 /* ContentView2Components.swift */; };
+		D38AABB92AD853B300EB1295 /* StringsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38AABB82AD853B300EB1295 /* StringsConstants.swift */; };
 		D3C623752AB61B350014F1C9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3C623772AB61B350014F1C9 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D36539992A0181F800AC2CF2 /* TheBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBridgeApp.swift; sourceTree = "<group>"; };
-		D365399E2A0181F800AC2CF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D365399E2A0181F800AC2CF2 /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
 		D36539A02A0181F900AC2CF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D36539A32A0181F900AC2CF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D36539AA2A01834500AC2CF2 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
@@ -102,8 +105,11 @@
 		D36539FB2A018E9000AC2CF2 /* fall.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fall.mp3; sourceTree = "<group>"; };
 		D36539FC2A018E9000AC2CF2 /* leaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = leaves.mp3; sourceTree = "<group>"; };
 		D36539FD2A018E9000AC2CF2 /* pant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pant.mp3; sourceTree = "<group>"; };
-		D3721E192AD3460E00D00010 /* ContentViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewComponents.swift; sourceTree = "<group>"; };
+		D3721E192AD3460E00D00010 /* ContentView1Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1Components.swift; sourceTree = "<group>"; };
 		D3721E1B2AD3478800D00010 /* PausedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausedView.swift; sourceTree = "<group>"; };
+		D38AABB32AD852E500EB1295 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		D38AABB52AD8531300EB1295 /* ContentView2Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2Components.swift; sourceTree = "<group>"; };
+		D38AABB82AD853B300EB1295 /* StringsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsConstants.swift; sourceTree = "<group>"; };
 		D3C623762AB61B350014F1C9 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		D3C623782AB61B9A0014F1C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +146,7 @@
 			children = (
 				D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */,
 				D36539BB2A01847B00AC2CF2 /* Game */,
-				D36539B62A01841C00AC2CF2 /* View */,
+				D36539B62A01841C00AC2CF2 /* Views */,
 				D3721E1D2AD34AB000D00010 /* Util */,
 				D36539C62A01859800AC2CF2 /* Resources */,
 				D36539A22A0181F900AC2CF2 /* Preview Content */,
@@ -156,10 +162,12 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		D36539B62A01841C00AC2CF2 /* View */ = {
+		D36539B62A01841C00AC2CF2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				D3721E182AD345BB00D00010 /* Chapter1Views */,
+				D38AABB72AD8533B00EB1295 /* Chapter2Views */,
+				D3721E1B2AD3478800D00010 /* PausedView.swift */,
 				D36539B02A0183D700AC2CF2 /* SettingsView.swift */,
 				D36539B22A0183EC00AC2CF2 /* PauseView.swift */,
 				D36539AA2A01834500AC2CF2 /* CreditsView.swift */,
@@ -167,7 +175,7 @@
 				D36539AE2A0183B600AC2CF2 /* HelpView.swift */,
 				D36539B42A01840B00AC2CF2 /* UISliderView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		D36539BB2A01847B00AC2CF2 /* Game */ = {
@@ -253,9 +261,8 @@
 		D3721E182AD345BB00D00010 /* Chapter1Views */ = {
 			isa = PBXGroup;
 			children = (
-				D365399E2A0181F800AC2CF2 /* ContentView.swift */,
-				D3721E1B2AD3478800D00010 /* PausedView.swift */,
-				D3721E192AD3460E00D00010 /* ContentViewComponents.swift */,
+				D365399E2A0181F800AC2CF2 /* ContentView1.swift */,
+				D3721E192AD3460E00D00010 /* ContentView1Components.swift */,
 			);
 			path = Chapter1Views;
 			sourceTree = "<group>";
@@ -264,9 +271,19 @@
 			isa = PBXGroup;
 			children = (
 				D36539D32A018DEB00AC2CF2 /* NavigationHelper.swift */,
+				D38AABB82AD853B300EB1295 /* StringsConstants.swift */,
 				D3C623772AB61B350014F1C9 /* Localizable.strings */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		D38AABB72AD8533B00EB1295 /* Chapter2Views */ = {
+			isa = PBXGroup;
+			children = (
+				D38AABB32AD852E500EB1295 /* ContentView2.swift */,
+				D38AABB52AD8531300EB1295 /* ContentView2Components.swift */,
+			);
+			path = Chapter2Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,21 +386,24 @@
 				D36539AB2A01834500AC2CF2 /* CreditsView.swift in Sources */,
 				D36539B52A01840B00AC2CF2 /* UISliderView.swift in Sources */,
 				D36539C32A0184F800AC2CF2 /* GameScene1+Touches.swift in Sources */,
-				D365399F2A0181F800AC2CF2 /* ContentView.swift in Sources */,
+				D365399F2A0181F800AC2CF2 /* ContentView1.swift in Sources */,
 				D36539C12A0184DC00AC2CF2 /* GameScene1+Text.swift in Sources */,
 				D36539BD2A0184A600AC2CF2 /* GameScene1+Setup.swift in Sources */,
 				D36539BF2A0184C200AC2CF2 /* GameScene1+Sound.swift in Sources */,
 				D36539B82A01844300AC2CF2 /* GameScene1.swift in Sources */,
-				D3721E1A2AD3460E00D00010 /* ContentViewComponents.swift in Sources */,
+				D3721E1A2AD3460E00D00010 /* ContentView1Components.swift in Sources */,
 				D36539C52A01850E00AC2CF2 /* GameScene1+Update.swift in Sources */,
 				D36539BA2A01846E00AC2CF2 /* GameScene1+Colisions.swift in Sources */,
 				D365399D2A0181F800AC2CF2 /* TheBridgeApp.swift in Sources */,
+				D38AABB42AD852E500EB1295 /* ContentView2.swift in Sources */,
 				D36539B12A0183D700AC2CF2 /* SettingsView.swift in Sources */,
 				D36539D22A018DE100AC2CF2 /* Script.swift in Sources */,
 				D36539D42A018DEB00AC2CF2 /* NavigationHelper.swift in Sources */,
 				D36539AF2A0183B600AC2CF2 /* HelpView.swift in Sources */,
 				D36539AD2A01838600AC2CF2 /* StartView.swift in Sources */,
 				D36539B32A0183EC00AC2CF2 /* PauseView.swift in Sources */,
+				D38AABB92AD853B300EB1295 /* StringsConstants.swift in Sources */,
+				D38AABB62AD8531300EB1295 /* ContentView2Components.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +556,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -572,6 +593,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (

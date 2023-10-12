@@ -29,7 +29,6 @@ extension GameScene1 {
         loadMap()
         
         if !control {
-            print(appHeight)
             if appHeight >= 600 || appHeight == 0.0{
                 // IPad
                 leftButton = SKSpriteNode(imageNamed: "leftButton")
