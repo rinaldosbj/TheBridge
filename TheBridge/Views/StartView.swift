@@ -1,14 +1,14 @@
 import SwiftUI
 
 struct StartView: View {
-    @AppStorage("pause") var pause: Bool = false
-    @AppStorage("volumeMusic") var volumeMusic: Double = 1.0
-    @AppStorage("volumeEffects") var volumeEffects: Double = 1.0
-    @AppStorage("finishedChapter1") var finishedChapter1: Bool = false // has counted days
-    @AppStorage("height") var appHeight: Double = 0.0
-    
-    @State var showEpsode1 = false
-    @State var showEpsode2 = false
+    @AppStorage("pause") var pause: Bool = false // in player
+    @AppStorage("volumeMusic") var volumeMusic: Double = 1.0 // in player
+    @AppStorage("volumeEffects") var volumeEffects: Double = 1.0 // in player
+    @AppStorage("finishedChapter1") var finishedChapter1: Bool = false // will be substituted for chapter in player
+    @AppStorage("height") var appHeight: Double = 0.0 // will be substituted for device size
+
+    @State var showEpsode1 = false // will be substituted for chapter in player
+    @State var showEpsode2 = false // will be substituted for chapter in player
     
     var body: some View {
         // if IPad has the current version updated
@@ -127,6 +127,7 @@ struct StartView: View {
                 }
             }
             .fullScreenCover(isPresented: $showEpsode1, onDismiss: {showEpsode1 = false}, content: {
+                // will change depending of the chapter in player
                 ContentView1()
             })
             .fullScreenCover(isPresented: $showEpsode2, onDismiss: {showEpsode2 = false}, content: {

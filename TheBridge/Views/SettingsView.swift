@@ -5,7 +5,7 @@ struct SettingsView: View {
     @AppStorage("pause") var pause: Bool = false
     @AppStorage("volumeMusic") var volumeMusic: Double = 0.5
     @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
-    @AppStorage("control") var control: Bool = false
+    @AppStorage("control") var control: Bool = false // change for control in Player
     @Environment(\.presentationMode) var presentation
     
     var body: some View {

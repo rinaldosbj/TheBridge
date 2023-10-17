@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D35F4A752ADD881900D89BE9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4A742ADD881900D89BE9 /* Player.swift */; };
+		D35F4A772ADD8B4A00D89BE9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4A762ADD8B4A00D89BE9 /* Device.swift */; };
 		D365399D2A0181F800AC2CF2 /* TheBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */; };
 		D365399F2A0181F800AC2CF2 /* ContentView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365399E2A0181F800AC2CF2 /* ContentView1.swift */; };
 		D36539A12A0181F900AC2CF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D36539A02A0181F900AC2CF2 /* Assets.xcassets */; };
@@ -15,7 +17,6 @@
 		D36539AD2A01838600AC2CF2 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539AC2A01838600AC2CF2 /* StartView.swift */; };
 		D36539AF2A0183B600AC2CF2 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539AE2A0183B600AC2CF2 /* HelpView.swift */; };
 		D36539B12A0183D700AC2CF2 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539B02A0183D700AC2CF2 /* SettingsView.swift */; };
-		D36539B32A0183EC00AC2CF2 /* PauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539B22A0183EC00AC2CF2 /* PauseView.swift */; };
 		D36539B52A01840B00AC2CF2 /* UISliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539B42A01840B00AC2CF2 /* UISliderView.swift */; };
 		D36539B82A01844300AC2CF2 /* GameScene1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539B72A01844300AC2CF2 /* GameScene1.swift */; };
 		D36539BA2A01846E00AC2CF2 /* GameScene1+Colisions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36539B92A01846E00AC2CF2 /* GameScene1+Colisions.swift */; };
@@ -60,6 +61,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D35F4A742ADD881900D89BE9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D35F4A762ADD8B4A00D89BE9 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D36539992A0181F800AC2CF2 /* TheBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBridgeApp.swift; sourceTree = "<group>"; };
 		D365399E2A0181F800AC2CF2 /* ContentView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView1.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		D36539AC2A01838600AC2CF2 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		D36539AE2A0183B600AC2CF2 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		D36539B02A0183D700AC2CF2 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		D36539B22A0183EC00AC2CF2 /* PauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PauseView.swift; sourceTree = "<group>"; };
 		D36539B42A01840B00AC2CF2 /* UISliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISliderView.swift; sourceTree = "<group>"; };
 		D36539B72A01844300AC2CF2 /* GameScene1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene1.swift; sourceTree = "<group>"; };
 		D36539B92A01846E00AC2CF2 /* GameScene1+Colisions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameScene1+Colisions.swift"; sourceTree = "<group>"; };
@@ -167,11 +169,12 @@
 			children = (
 				D3721E182AD345BB00D00010 /* Chapter1Views */,
 				D38AABB72AD8533B00EB1295 /* Chapter2Views */,
+				D36539AC2A01838600AC2CF2 /* StartView.swift */,
+				D35F4A742ADD881900D89BE9 /* Player.swift */,
+				D35F4A762ADD8B4A00D89BE9 /* Device.swift */,
 				D3721E1B2AD3478800D00010 /* PausedView.swift */,
 				D36539B02A0183D700AC2CF2 /* SettingsView.swift */,
-				D36539B22A0183EC00AC2CF2 /* PauseView.swift */,
 				D36539AA2A01834500AC2CF2 /* CreditsView.swift */,
-				D36539AC2A01838600AC2CF2 /* StartView.swift */,
 				D36539AE2A0183B600AC2CF2 /* HelpView.swift */,
 				D36539B42A01840B00AC2CF2 /* UISliderView.swift */,
 			);
@@ -386,6 +389,7 @@
 				D36539AB2A01834500AC2CF2 /* CreditsView.swift in Sources */,
 				D36539B52A01840B00AC2CF2 /* UISliderView.swift in Sources */,
 				D36539C32A0184F800AC2CF2 /* GameScene1+Touches.swift in Sources */,
+				D35F4A752ADD881900D89BE9 /* Player.swift in Sources */,
 				D365399F2A0181F800AC2CF2 /* ContentView1.swift in Sources */,
 				D36539C12A0184DC00AC2CF2 /* GameScene1+Text.swift in Sources */,
 				D36539BD2A0184A600AC2CF2 /* GameScene1+Setup.swift in Sources */,
@@ -396,12 +400,12 @@
 				D36539BA2A01846E00AC2CF2 /* GameScene1+Colisions.swift in Sources */,
 				D365399D2A0181F800AC2CF2 /* TheBridgeApp.swift in Sources */,
 				D38AABB42AD852E500EB1295 /* ContentView2.swift in Sources */,
+				D35F4A772ADD8B4A00D89BE9 /* Device.swift in Sources */,
 				D36539B12A0183D700AC2CF2 /* SettingsView.swift in Sources */,
 				D36539D22A018DE100AC2CF2 /* Script.swift in Sources */,
 				D36539D42A018DEB00AC2CF2 /* NavigationHelper.swift in Sources */,
 				D36539AF2A0183B600AC2CF2 /* HelpView.swift in Sources */,
 				D36539AD2A01838600AC2CF2 /* StartView.swift in Sources */,
-				D36539B32A0183EC00AC2CF2 /* PauseView.swift in Sources */,
 				D38AABB92AD853B300EB1295 /* StringsConstants.swift in Sources */,
 				D38AABB62AD8531300EB1295 /* ContentView2Components.swift in Sources */,
 			);
