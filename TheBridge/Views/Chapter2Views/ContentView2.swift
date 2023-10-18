@@ -32,8 +32,16 @@ struct ContentView2: View {
     }
     
     var body: some View {
-        SpriteView(scene: scene)
-            .ignoresSafeArea()
+        ZStack {
+            Image("backgroundSettings")
+                .resizable()
+                .ignoresSafeArea()
+            
+            Text(StringsConstants().COMINGSOON)
+                .font(.custom("PixelifySans-Regular", size: device.size.height/8))
+                .foregroundColor(.white)
+                .minimumScaleFactor(0.01)
+        }
         
             .overlay {
                 pauseButton
