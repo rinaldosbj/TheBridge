@@ -6,12 +6,8 @@ import UIKit
 class GameScene1: SKScene, SKPhysicsContactDelegate {
         
     // MARK: Variables
-    
-    @AppStorage("pause") var pause: Bool = false
-    // Used to change the Sound Effects volume
-    
     var device = Device.shared
-    var playerObject = Player()
+    var playerObject = Player.shared
     
     var level = 1
     // Define the current level the payer is in

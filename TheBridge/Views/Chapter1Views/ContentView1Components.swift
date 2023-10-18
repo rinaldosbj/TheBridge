@@ -37,7 +37,10 @@ extension ContentView1 {
         VStack {
             HStack{
                 Spacer()
-                Button(action: {showPauseView = true}) {
+                Button(action: {
+                    showPauseView = true
+                    player.paused()
+                }) {
                     ZStack {
                         Image("buttonBg")
                             .resizable()

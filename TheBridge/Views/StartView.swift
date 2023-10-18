@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct StartView: View {
-    @AppStorage("pause") var pause: Bool = false // in player
     @AppStorage("finishedChapter1") var finishedChapter1: Bool = false // will be substituted for chapter in player
 
     @State var showEpsode1 = false // will be substituted for chapter in player
     @State var showEpsode2 = false // will be substituted for chapter in player
     
     var device = Device.shared
+    var player = Player.shared
     
     var body: some View {
         // if IPad has the current version updated
@@ -136,7 +136,7 @@ struct StartView: View {
                 if newValue { showEpsode2 = true }
             })
             .onAppear() {
-                pause = false
+                player.unpaused()
                 device.setSize(width: geo.size.width, heigth: geo.size.height)
             }
         }.ignoresSafeArea()

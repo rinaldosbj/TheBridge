@@ -447,7 +447,7 @@ extension GameScene1 {
         whiteBall4.position = player!.position
         
         
-        if pause {
+        if playerObject.isPaused {
             cloathingAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
             splashAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
             backgroundAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))

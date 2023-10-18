@@ -2,8 +2,6 @@ import SwiftUI
 
 struct SettingsView: View {
     
-    @AppStorage("pause") var pause: Bool = false
-    
     @State var controlType: Control = .Button
     
     @Environment(\.presentationMode) var presentation
@@ -93,7 +91,6 @@ struct SettingsView: View {
                 Button (action: {
                     player.changeControlType(for: controlType)
                     presentation.wrappedValue.dismiss()
-                    pause = false
                 }) {
                     ZStack {
                         Image("buttonBgWide")
@@ -110,7 +107,6 @@ struct SettingsView: View {
                 .padding(.trailing,device.size.width/3.2)
         }
         .onAppear {
-            pause = true
             volumeMusic = player.volumeMusic
             volumeEffects = player.volumeEffects
             controlType = player.controlType

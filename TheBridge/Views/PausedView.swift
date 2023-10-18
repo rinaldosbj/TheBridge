@@ -9,15 +9,14 @@ import SwiftUI
 
 struct PausedView: View {
     
-    @AppStorage("pause") var pause: Bool = false
-    @State var volumeMusic: Double = 0.0
-    @State var volumeEffects: Double = 0.0
-    
     @Environment(\.presentationMode) var presentation
     
     var device = Device.shared
     
-    var player = Player()
+    var player = Player.shared
+    
+    @State var volumeMusic: Double = 0.0
+    @State var volumeEffects: Double = 0.0
     
     @Binding var showPauseView: Bool
     
@@ -67,7 +66,7 @@ struct PausedView: View {
                 
                 Button (action: {
                     showPauseView = false
-                    pause = false
+                    player.unpaused()
                 }) {
                     ZStack {
                         Image("buttonBgWide")
@@ -82,7 +81,6 @@ struct PausedView: View {
                 
                 Button (action: {
                     presentation.wrappedValue.dismiss()
-                    pause = false
                 }) {
                     ZStack {
                         Image("buttonBgWide")

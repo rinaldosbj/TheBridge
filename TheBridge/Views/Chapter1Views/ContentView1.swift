@@ -3,7 +3,6 @@ import SpriteKit
 
 struct ContentView1: View {
     
-    @AppStorage("pause") var pause: Bool = false
     @AppStorage("finishedChapter1") var finishedChapter1: Bool = false
     
     @State var showChapter1 = true
@@ -24,6 +23,7 @@ struct ContentView1: View {
     @Environment(\.presentationMode) var presentation
     
     var device = Device.shared
+    var player = Player.shared
     
     var scene: SKScene {
         let scene = GameScene1()

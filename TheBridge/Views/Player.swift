@@ -13,6 +13,8 @@ enum Control: Int, CaseIterable{
 
 class Player {
     
+    static var shared = Player()
+    
     private var defaults = UserDefaults()
     
     private struct Constants {
