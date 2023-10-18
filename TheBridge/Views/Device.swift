@@ -9,22 +9,12 @@ import SwiftUI
 
 class Device {
     
-    private var defaults = UserDefaults()
+    static var shared = Device()
     
-    private struct Constants {
-        static var width = "width"
-        static var height = "height"
-    }
-    
-    var size: CGSize {
-        let width = defaults.double(forKey: Constants.width)
-        let height = defaults.double(forKey: Constants.height)
-        return CGSize(width: width, height: height)
-    }
+    var size = CGSize(width: 0, height: 0)
     
     func setSize(width: Double, heigth: Double) {
-        defaults.set(width, forKey: Constants.width)
-        defaults.set(heigth, forKey: Constants.height)
+        size = CGSize(width: width, height: heigth)
     }
     
 }

@@ -14,7 +14,7 @@ extension ContentView1 {
             .scaledToFill()
             .ignoresSafeArea()
             .scaleEffect(scaleValue)
-            .offset(x: positionAnimation ? 0: (size.height/3), y: positionAnimation ? 0: -(size.height*1.75))
+            .offset(x: positionAnimation ? 0: (device.size.height/3), y: positionAnimation ? 0: -(device.size.height*1.75))
             .onAppear {
                 if isFirst {
                     isFirst.toggle()
@@ -43,13 +43,13 @@ extension ContentView1 {
                             .resizable()
                         Image("pause")
                             .resizable()
-                            .frame(width: size.width/28, height: size.width/28)
+                            .frame(width: device.size.width/28, height: device.size.width/28)
                     }
                 }
                 .frame(minWidth: 70,minHeight: 70)
-                .frame(width: size.width/14, height: size.height/10)
-                .padding(.trailing, size.width/40)
-                .padding(.top, size.height/15)
+                .frame(width: device.size.width/14, height: device.size.height/10)
+                .padding(.trailing, device.size.width/40)
+                .padding(.top, device.size.height/15)
             }
             Spacer()
         }
@@ -62,7 +62,7 @@ extension ContentView1 {
                 .ignoresSafeArea()
             
             Text(title)
-                .font(.custom("PixelifySans-Regular", size: size.height/8))
+                .font(.custom("PixelifySans-Regular", size: device.size.height/8))
                 .foregroundColor(.white)
                 .minimumScaleFactor(0.01)
                 .animation(.easeInOut, value: text1Animation)

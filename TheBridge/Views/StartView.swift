@@ -5,10 +5,11 @@ struct StartView: View {
     @AppStorage("volumeMusic") var volumeMusic: Double = 1.0 // in player
     @AppStorage("volumeEffects") var volumeEffects: Double = 1.0 // in player
     @AppStorage("finishedChapter1") var finishedChapter1: Bool = false // will be substituted for chapter in player
-    @AppStorage("height") var appHeight: Double = 0.0 // will be substituted for device size
 
     @State var showEpsode1 = false // will be substituted for chapter in player
     @State var showEpsode2 = false // will be substituted for chapter in player
+    
+    var device = Device.shared
     
     var body: some View {
         // if IPad has the current version updated
@@ -138,9 +139,9 @@ struct StartView: View {
             })
             .onAppear() {
                 pause = false
-                appHeight = geo.size.height
+                device.setSize(width: geo.size.width, heigth: geo.size.height)
             }
-        }
+        }.ignoresSafeArea()
     }
     
     init() {

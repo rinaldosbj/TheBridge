@@ -25,6 +25,8 @@ struct ContentView2: View {
     
     @Environment(\.presentationMode) var presentation
     
+    var device = Device.shared
+    
     var scene: SKScene {
         let scene = GameScene1()
         scene.size = CGSize(width: 1920, height: 1280)
@@ -33,30 +35,25 @@ struct ContentView2: View {
         return scene
     }
     
-    @State var size = CGSize()
-    
     var body: some View {
-        GeometryReader{
-            geo in
-            SpriteView(scene: scene)
-                .ignoresSafeArea()
-                .onAppear { size = geo.size }
-            
-                .overlay {
-                    pauseButton
-                    
-                    if showChapter1 {
-                        chapterBanner
-                    }
-                    
-                    if showPauseView {
-                        PausedView(size: $size, showPauseView: $showPauseView)
-                    }
-                    if showCredit {
-                        credits
-                    }
+        SpriteView(scene: scene)
+            .ignoresSafeArea()
+        
+            .overlay {
+                pauseButton
+                
+                if showChapter1 {
+                    chapterBanner
                 }
-        }
+                
+                if showPauseView {
+                    PausedView(showPauseView: $showPauseView)
+                }
+                if showCredit {
+                    credits
+                }
+                
+            }
     }
     
 }

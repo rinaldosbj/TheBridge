@@ -8,9 +8,9 @@ struct SettingsView: View {
     @AppStorage("control") var control: Bool = false // change for control in Player
     @Environment(\.presentationMode) var presentation
     
+    var device = Device.shared
+    
     var body: some View {
-        GeometryReader{
-            geo in
             ZStack {
                 Image("backgroundSettings")
                     .resizable()
@@ -20,9 +20,9 @@ struct SettingsView: View {
                     
                     Text("Background sounds")
                         .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
+                        .font(.custom("PixelifySans-Regular", size: device.size.height/16))
                         .multilineTextAlignment(.center)
-                        .padding(.bottom,-geo.size.width/220)
+                        .padding(.bottom,-device.size.width/220)
                     HStack{
                         Image("noMusic")
                         UISliderView(value: $volumeMusic,
@@ -33,14 +33,14 @@ struct SettingsView: View {
                                      maxTrackColor: UIColor(named: "darkGray")!)
                         Image("music")
                     }
-                    .padding(.bottom,geo.size.width/40)
+                    .padding(.bottom,device.size.width/40)
                     
                     
                     Text("Sound effects")
                         .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
+                        .font(.custom("PixelifySans-Regular", size: device.size.height/16))
                         .multilineTextAlignment(.center)
-                        .padding(.bottom,-geo.size.width/220)
+                        .padding(.bottom,-device.size.width/220)
                     HStack{
                         Image("noMusic")
                         UISliderView(value: $volumeEffects,
@@ -51,7 +51,7 @@ struct SettingsView: View {
                                      maxTrackColor: UIColor(named: "darkGray")!)
                         Image("music")
                     }
-                    .padding(.bottom,geo.size.width/20)
+                    .padding(.bottom,device.size.width/20)
                     
                     HStack{
                         Button (action: {
@@ -64,7 +64,7 @@ struct SettingsView: View {
                                     Image("buttonBgWide")
                                         .resizable()
                                     Text("Buttons")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/20))
+                                        .font(.custom("PixelifySans-Regular", size: device.size.height/20))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
                                         .frame(minHeight: 50)
@@ -76,14 +76,14 @@ struct SettingsView: View {
                                     Image("buttonBgWideDisable")
                                         .resizable()
                                     Text("Buttons")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/20))
+                                        .font(.custom("PixelifySans-Regular", size: device.size.height/20))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
                                         .frame(minHeight: 50)
                                 }
                             }
                         }
-                        .frame(width: geo.size.width/5.5, height: geo.size.height/14)
+                        .frame(width: device.size.width/5.5, height: device.size.height/14)
                         
                         Button (action: {
                             if !control {
@@ -95,7 +95,7 @@ struct SettingsView: View {
                                     Image("buttonBgWide")
                                         .resizable()
                                     Text("Joystick")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/20))
+                                        .font(.custom("PixelifySans-Regular", size: device.size.height/20))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
                                         .frame(minHeight: 50)
@@ -107,16 +107,16 @@ struct SettingsView: View {
                                     Image("buttonBgWideDisable")
                                         .resizable()
                                     Text("Joystick")
-                                        .font(.custom("PixelifySans-Regular", size: geo.size.height/20))
+                                        .font(.custom("PixelifySans-Regular", size: device.size.height/20))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
                                         .frame(minHeight: 50)
                                 }
                             }
                         }
-                        .frame(width: geo.size.width/5.5, height: geo.size.height/14)
+                        .frame(width: device.size.width/5.5, height: device.size.height/14)
                     }
-                    .padding(.bottom,geo.size.width/60)
+                    .padding(.bottom,device.size.width/60)
                     
                     Button (action: {
                         presentation.wrappedValue.dismiss()
@@ -126,19 +126,19 @@ struct SettingsView: View {
                             Image("buttonBgWide")
                                 .resizable()
                             Text("Save")
-                                .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
+                                .font(.custom("PixelifySans-Regular", size: device.size.height/16))
                                 .minimumScaleFactor(0.01)
                                 .foregroundColor(.white)
                         }
                     }
-                    .frame(width: geo.size.width/2.7, height: geo.size.height/7)
+                    .frame(width: device.size.width/2.7, height: device.size.height/7)
                     
-                }.padding(.leading,geo.size.width/3.2)
-                    .padding(.trailing,geo.size.width/3.2)
+                }.padding(.leading,device.size.width/3.2)
+                    .padding(.trailing,device.size.width/3.2)
             }
-        }
         .onAppear() {
             pause = true
+            print("--------- \(device.size)")
         }
     }
     init() {

@@ -15,7 +15,8 @@ struct PausedView: View {
     
     @Environment(\.presentationMode) var presentation
     
-    @Binding var size: CGSize
+    var device = Device.shared
+    
     @Binding var showPauseView: Bool
     
     var body: some View {
@@ -28,9 +29,9 @@ struct PausedView: View {
                 
                 Text("Background sounds")
                     .foregroundColor(.white)
-                    .font(.custom("PixelifySans-Regular", size: size.height/16))
+                    .font(.custom("PixelifySans-Regular", size: device.size.height/16))
                     .multilineTextAlignment(.center)
-                    .padding(.bottom,-size.width/220)
+                    .padding(.bottom,-device.size.width/220)
                 HStack{
                     Image("noMusic")
                     UISliderView(value: $volumeMusic,
@@ -41,14 +42,14 @@ struct PausedView: View {
                                  maxTrackColor: UIColor(named: "darkGray")!)
                     Image("music")
                 }
-                .padding(.bottom,size.width/40)
+                .padding(.bottom,device.size.width/40)
                 
                 
                 Text("Sound effects")
                     .foregroundColor(.white)
-                    .font(.custom("PixelifySans-Regular", size: size.height/16))
+                    .font(.custom("PixelifySans-Regular", size: device.size.height/16))
                     .multilineTextAlignment(.center)
-                    .padding(.bottom,-size.width/220)
+                    .padding(.bottom,-device.size.width/220)
                 HStack{
                     Image("noMusic")
                     UISliderView(value: $volumeEffects,
@@ -59,7 +60,7 @@ struct PausedView: View {
                                  maxTrackColor: UIColor(named: "darkGray")!)
                     Image("music")
                 }
-                .padding(.bottom,size.width/20)
+                .padding(.bottom,device.size.width/20)
                 
                 
                 Button (action: {
@@ -70,12 +71,12 @@ struct PausedView: View {
                         Image("buttonBgWide")
                             .resizable()
                         Text("Back")
-                            .font(.custom("PixelifySans-Regular", size: size.height/14))
+                            .font(.custom("PixelifySans-Regular", size: device.size.height/14))
                             .minimumScaleFactor(0.01)
                             .foregroundColor(.white)
                     }
                 }
-                .frame(width: size.width/2.7, height: size.height/7)
+                .frame(width: device.size.width/2.7, height: device.size.height/7)
                 
                 Button (action: {
                     presentation.wrappedValue.dismiss()
@@ -85,15 +86,15 @@ struct PausedView: View {
                         Image("buttonBgWide")
                             .resizable()
                         Text("Back to Menu")
-                            .font(.custom("PixelifySans-Regular", size: size.height/16))
+                            .font(.custom("PixelifySans-Regular", size: device.size.height/16))
                             .minimumScaleFactor(0.01)
                             .foregroundColor(.white)
                     }
                 }
-                .frame(width: size.width/2.7, height: size.height/7)
+                .frame(width: device.size.width/2.7, height: device.size.height/7)
                 
-            }.padding(.leading,size.width/3.2)
-                .padding(.trailing,size.width/3.2)
+            }.padding(.leading,device.size.width/3.2)
+                .padding(.trailing,device.size.width/3.2)
         }
     }
 }
