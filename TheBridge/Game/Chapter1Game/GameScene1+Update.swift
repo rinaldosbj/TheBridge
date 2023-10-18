@@ -29,7 +29,7 @@ extension GameScene1 {
         playerLastPosition = player!.position
         
         // Jump function for joystick
-        if isclickingJumpJoystick && control {
+        if isclickingJumpJoystick && (playerObject.controlType == .Joystick) {
             if canJump {
                 if !isJumping && player!.physicsBody!.velocity.dy <= maxSpeed && (timer-timeJumped) >= 1.5 {
                     // If the user is touching on the jumpButton
@@ -462,24 +462,24 @@ extension GameScene1 {
             wingsAudio.run(SKAction.changeVolume(to: 0.0, duration: 0.0))
         }
         else {
-            cloathingAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            shirtAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            splashAudio.run(SKAction.changeVolume(to: Float(volumeMusic), duration: 0.0))
+            cloathingAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            shirtAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            splashAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeMusic), duration: 0.0))
             if level <= 2 || level == 6 || level == 7 {
-                backgroundAudio.run(SKAction.changeVolume(to: Float(volumeMusic * 0.4), duration: 0.0))
+                backgroundAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeMusic * 0.4), duration: 0.0))
             }
             else {
-                backgroundAudio.run(SKAction.changeVolume(to: Float(volumeMusic), duration: 0.0))
+                backgroundAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeMusic), duration: 0.0))
             }
-            leavesAudio.run(SKAction.changeVolume(to: Float(volumeMusic), duration: 0.0))
-            birdAudio.run(SKAction.changeVolume(to: Float(volumeMusic)*0.4, duration: 0.0))
-            breakAudio.run(SKAction.changeVolume(to: Float(volumeMusic)*0.4, duration: 0.0))
-            fallAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            energyAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            jumpAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            batAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            wingsAudio.run(SKAction.changeVolume(to: Float(volumeEffects), duration: 0.0))
-            audioPlayer.volume = Float(volumeEffects)
+            leavesAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeMusic), duration: 0.0))
+            birdAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeMusic)*0.4, duration: 0.0))
+            breakAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeMusic)*0.4, duration: 0.0))
+            fallAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            energyAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            jumpAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            batAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            wingsAudio.run(SKAction.changeVolume(to: Float(playerObject.volumeEffects), duration: 0.0))
+            audioPlayer.volume = Float(playerObject.volumeEffects)
         }
     }
 }

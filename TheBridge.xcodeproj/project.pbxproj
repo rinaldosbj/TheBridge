@@ -171,7 +171,6 @@
 				D38AABB72AD8533B00EB1295 /* Chapter2Views */,
 				D36539AC2A01838600AC2CF2 /* StartView.swift */,
 				D35F4A742ADD881900D89BE9 /* Player.swift */,
-				D35F4A762ADD8B4A00D89BE9 /* Device.swift */,
 				D3721E1B2AD3478800D00010 /* PausedView.swift */,
 				D36539B02A0183D700AC2CF2 /* SettingsView.swift */,
 				D36539AA2A01834500AC2CF2 /* CreditsView.swift */,
@@ -275,6 +274,7 @@
 			children = (
 				D36539D32A018DEB00AC2CF2 /* NavigationHelper.swift */,
 				D38AABB82AD853B300EB1295 /* StringsConstants.swift */,
+				D35F4A762ADD8B4A00D89BE9 /* Device.swift */,
 				D3C623772AB61B350014F1C9 /* Localizable.strings */,
 			);
 			path = Util;

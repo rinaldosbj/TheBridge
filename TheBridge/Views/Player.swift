@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum Control: Int {
+enum Control: Int, CaseIterable{
     case Button, Joystick
 }
 
@@ -16,10 +16,23 @@ class Player {
     private var defaults = UserDefaults()
     
     private struct Constants {
+        static var setup = "setup"
         static var chapter = "chapter"
         static var volumeMusic = "volumeMusic"
         static var volumeEffects = "volumeEffects"
         static var control = "control"
+    }
+    
+    var didPlayerSetup: Bool {
+        defaults.bool(forKey: Constants.setup)
+    }
+    
+    func setupPlayer() {
+        if !didPlayerSetup {
+            changeVolumeMusic(newVolume: 0.5)
+            changeVolumeEffects(newVolume: 0.5)
+            defaults.set(true, forKey: Constants.setup)
+        }
     }
     
     var chapter: Int {

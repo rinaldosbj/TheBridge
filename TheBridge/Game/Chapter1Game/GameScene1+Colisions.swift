@@ -38,7 +38,7 @@ extension GameScene1 {
         
         if node.name == "floor" {
             isJumping = false
-            if (player?.frame.minY)! >= node.frame.maxY && control {
+            if (player?.frame.minY)! >= node.frame.maxY && (playerObject.controlType == .Joystick) {
                 player?.physicsBody?.velocity.dy = 0
             }
             if !(isMovinLeft || isMovinRight) {

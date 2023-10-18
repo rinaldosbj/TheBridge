@@ -18,7 +18,7 @@ extension GameScene1{
             
             if textDidHappened {
                 if isNotHappeningAnimation {
-                    if !control {
+                    if playerObject.controlType == .Button {
                         if canJump {
                             if location.x >= jumpButton!.frame.minX && location.x <= jumpButton!.frame.maxX && location.y >= jumpButton!.frame.minY && location.y <= jumpButton!.frame.maxY && !isJumping && player!.physicsBody!.velocity.dy <= maxSpeed && (timer-timeJumped) >= 1.5 {
                                 // If the user is touching on the jumpButton
@@ -87,7 +87,7 @@ extension GameScene1{
             
             if textDidHappened {
                 if isNotHappeningAnimation {
-                if !control {
+                    if playerObject.controlType == .Button {
                     if isMovinLeft && !(location.x >= leftButton!.frame.minX && location.x <= leftButton!.frame.maxX && location.y >= leftButton!.frame.minY && location.y <= leftButton!.frame.maxY) && touch == touchForMoved {
                         // If the user moved his finger out of the leftButton
                         isMovinLeft = false
@@ -176,7 +176,7 @@ extension GameScene1{
                 if !(level == 5 || level == 10){
                     canJump = true
                 }
-                if !control {
+                if playerObject.controlType == .Button {
                     if location.x >= leftButton!.frame.minX && location.x <= leftButton!.frame.maxX && location.y >= leftButton!.frame.minY && location.y <= leftButton!.frame.maxY && !(leftButton?.isHidden ?? false){
                         isMovinLeft = false
                         player?.removeAllActions()

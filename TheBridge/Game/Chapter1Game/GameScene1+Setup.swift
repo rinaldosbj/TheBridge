@@ -28,7 +28,7 @@ extension GameScene1 {
         
         loadMap()
         
-        if !control {
+        if playerObject.controlType == .Button {
             if device.size.height >= 600 || device.size.height == 0.0{
                 // IPad
                 leftButton = SKSpriteNode(imageNamed: "leftButton")
@@ -84,7 +84,7 @@ extension GameScene1 {
         }
         
         if level == 5 {
-            if !control {
+            if playerObject.controlType == .Button {
                 jumpButton?.isHidden = true
             }
             canJump = false
@@ -96,7 +96,7 @@ extension GameScene1 {
             addChild(background!)
         }
         if level == 10 {
-            if !control {
+            if playerObject.controlType == .Button {
                 jumpButton?.isHidden = true
             }
             canJump = false

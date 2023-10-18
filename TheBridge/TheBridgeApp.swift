@@ -18,6 +18,7 @@ struct TheBridgeApp: App {
                 }
                 .navigationViewStyle(.stack)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .onAppear { Player().setupPlayer() }
             }
         }
     }

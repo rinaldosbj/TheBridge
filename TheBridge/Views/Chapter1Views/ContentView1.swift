@@ -4,8 +4,6 @@ import SpriteKit
 struct ContentView1: View {
     
     @AppStorage("pause") var pause: Bool = false
-    @AppStorage("volumeMusic") var volumeMusic: Double = 0.5
-    @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
     @AppStorage("finishedChapter1") var finishedChapter1: Bool = false
     
     @State var showChapter1 = true

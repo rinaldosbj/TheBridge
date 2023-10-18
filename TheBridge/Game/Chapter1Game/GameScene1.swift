@@ -8,14 +8,10 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     // MARK: Variables
     
     @AppStorage("pause") var pause: Bool = false
-    // Used to mute the Music while the game is paused
-    @AppStorage("volumeMusic") var volumeMusic: Double = 0.5
-    // Used to change the Music volume
-    @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
     // Used to change the Sound Effects volume
-    @AppStorage("control") var control: Bool = false
     
     var device = Device.shared
+    var playerObject = Player()
     
     var level = 1
     // Define the current level the payer is in
@@ -154,7 +150,7 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
         let urlString = Bundle.main.path(forResource: "energy", ofType: "mp3")
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: urlString!))
-            audioPlayer.volume = Float(volumeEffects)
+            audioPlayer.volume = Float(playerObject.volumeEffects)
         }
         catch{
             print("Error: \(error.localizedDescription)")

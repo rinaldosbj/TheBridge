@@ -10,12 +10,14 @@ import SwiftUI
 struct PausedView: View {
     
     @AppStorage("pause") var pause: Bool = false
-    @AppStorage("volumeMusic") var volumeMusic: Double = 0.5
-    @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
+    @State var volumeMusic: Double = 0.0
+    @State var volumeEffects: Double = 0.0
     
     @Environment(\.presentationMode) var presentation
     
     var device = Device.shared
+    
+    var player = Player()
     
     @Binding var showPauseView: Bool
     
@@ -94,7 +96,17 @@ struct PausedView: View {
                 .frame(width: device.size.width/2.7, height: device.size.height/7)
                 
             }.padding(.leading,device.size.width/3.2)
-                .padding(.trailing,device.size.width/3.2)
+            .padding(.trailing,device.size.width/3.2)
+        }
+        .onAppear {
+            volumeMusic = player.volumeMusic
+            volumeEffects = player.volumeEffects
+        }
+        .onChange(of: volumeMusic) { newValue in
+            player.changeVolumeMusic(newVolume: newValue)
+        }
+        .onChange(of: volumeEffects) { newValue in
+            player.changeVolumeEffects(newVolume: newValue)
         }
     }
 }

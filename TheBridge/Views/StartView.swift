@@ -2,8 +2,6 @@ import SwiftUI
 
 struct StartView: View {
     @AppStorage("pause") var pause: Bool = false // in player
-    @AppStorage("volumeMusic") var volumeMusic: Double = 1.0 // in player
-    @AppStorage("volumeEffects") var volumeEffects: Double = 1.0 // in player
     @AppStorage("finishedChapter1") var finishedChapter1: Bool = false // will be substituted for chapter in player
 
     @State var showEpsode1 = false // will be substituted for chapter in player
@@ -100,7 +98,7 @@ struct StartView: View {
                                     .resizable()
                                     .frame(minWidth: 200, minHeight: 70)
                                 Text("Credits")
-                                    .font(.custom("PixelifySans-Regular", size: geo.size.height/14))
+                                    .font(.custom("PixelifySans-Regular", size: geo.size.height/16))
                                     .foregroundColor(.white)
                                     .minimumScaleFactor(0.01)
                             }

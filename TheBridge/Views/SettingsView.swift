@@ -3,110 +3,81 @@ import SwiftUI
 struct SettingsView: View {
     
     @AppStorage("pause") var pause: Bool = false
-    @AppStorage("volumeMusic") var volumeMusic: Double = 0.5
-    @AppStorage("volumeEffects") var volumeEffects: Double = 0.5
-    @AppStorage("control") var control: Bool = false // change for control in Player
+    
+    @State var controlType: Control = .Button
+    
     @Environment(\.presentationMode) var presentation
     
     var device = Device.shared
     
+    var player = Player()
+    
+    @State var volumeMusic: Double = 0.0
+    @State var volumeEffects: Double = 0.5
+    
     var body: some View {
-            ZStack {
-                Image("backgroundSettings")
-                    .resizable()
-                    .ignoresSafeArea()
+        ZStack {
+            Image("backgroundSettings")
+                .resizable()
+                .ignoresSafeArea()
+            
+            VStack(alignment: .center) {
                 
-                VStack(alignment: .center) {
-                    
-                    Text("Background sounds")
-                        .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: device.size.height/16))
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom,-device.size.width/220)
-                    HStack{
-                        Image("noMusic")
-                        UISliderView(value: $volumeMusic,
-                                     minValue: 0.0,
-                                     maxValue: 1.0,
-                                     thumbColor: .white,
-                                     minTrackColor: UIColor(named: "lightGray")!,
-                                     maxTrackColor: UIColor(named: "darkGray")!)
-                        Image("music")
-                    }
-                    .padding(.bottom,device.size.width/40)
-                    
-                    
-                    Text("Sound effects")
-                        .foregroundColor(.white)
-                        .font(.custom("PixelifySans-Regular", size: device.size.height/16))
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom,-device.size.width/220)
-                    HStack{
-                        Image("noMusic")
-                        UISliderView(value: $volumeEffects,
-                                     minValue: 0.0,
-                                     maxValue: 1.0,
-                                     thumbColor: .white,
-                                     minTrackColor: UIColor(named: "lightGray")!,
-                                     maxTrackColor: UIColor(named: "darkGray")!)
-                        Image("music")
-                    }
-                    .padding(.bottom,device.size.width/20)
-                    
-                    HStack{
-                        Button (action: {
-                            if control {
-                                control.toggle()
+                Text("Background sounds")
+                    .foregroundColor(.white)
+                    .font(.custom("PixelifySans-Regular", size: device.size.height/16))
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom,-device.size.width/220)
+                HStack{
+                    Image("noMusic")
+                    UISliderView(value: $volumeMusic,
+                                 minValue: 0.0,
+                                 maxValue: 1.0,
+                                 thumbColor: .white,
+                                 minTrackColor: UIColor(named: "lightGray")!,
+                                 maxTrackColor: UIColor(named: "darkGray")!)
+                    Image("music")
+                }
+                .padding(.bottom,device.size.width/40)
+                
+                
+                Text("Sound effects")
+                    .foregroundColor(.white)
+                    .font(.custom("PixelifySans-Regular", size: device.size.height/16))
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom,-device.size.width/220)
+                HStack{
+                    Image("noMusic")
+                    UISliderView(value: $volumeEffects,
+                                 minValue: 0.0,
+                                 maxValue: 1.0,
+                                 thumbColor: .white,
+                                 minTrackColor: UIColor(named: "lightGray")!,
+                                 maxTrackColor: UIColor(named: "darkGray")!)
+                    Image("music")
+                }
+                .padding(.bottom,device.size.width/20)
+                
+                HStack{
+                    ForEach(Control.allCases, id: \.self) { type in
+                        Button {
+                            if controlType != type {
+                                controlType = type
                             }
-                        }) {
-                            if control {
-                                ZStack {
+                        } label: {
+                            ZStack {
+                                if controlType == type {
                                     Image("buttonBgWide")
                                         .resizable()
-                                    Text("Buttons")
+                                    (type == .Button ? Text("Buttons") : Text("Joystick"))
                                         .font(.custom("PixelifySans-Regular", size: device.size.height/20))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.white)
                                         .frame(minHeight: 50)
-                                }
-                            }
-                            else {
-                                
-                                ZStack {
+                                } else {
                                     Image("buttonBgWideDisable")
                                         .resizable()
-                                    Text("Buttons")
-                                        .font(.custom("PixelifySans-Regular", size: device.size.height/20))
-                                        .minimumScaleFactor(0.01)
-                                        .foregroundColor(.gray)
-                                        .frame(minHeight: 50)
-                                }
-                            }
-                        }
-                        .frame(width: device.size.width/5.5, height: device.size.height/14)
-                        
-                        Button (action: {
-                            if !control {
-                                control.toggle()
-                            }
-                        }) {
-                            if !control {
-                                ZStack {
-                                    Image("buttonBgWide")
-                                        .resizable()
-                                    Text("Joystick")
-                                        .font(.custom("PixelifySans-Regular", size: device.size.height/20))
-                                        .minimumScaleFactor(0.01)
-                                        .foregroundColor(.white)
-                                        .frame(minHeight: 50)
-                                }
-                            }
-                            else {
-                                
-                                ZStack {
-                                    Image("buttonBgWideDisable")
-                                        .resizable()
-                                    Text("Joystick")
+                                    (type == .Button ? Text("Buttons") : Text("Joystick"))
                                         .font(.custom("PixelifySans-Regular", size: device.size.height/20))
                                         .minimumScaleFactor(0.01)
                                         .foregroundColor(.gray)
@@ -116,34 +87,45 @@ struct SettingsView: View {
                         }
                         .frame(width: device.size.width/5.5, height: device.size.height/14)
                     }
-                    .padding(.bottom,device.size.width/60)
-                    
-                    Button (action: {
-                        presentation.wrappedValue.dismiss()
-                        pause = false
-                    }) {
-                        ZStack {
-                            Image("buttonBgWide")
-                                .resizable()
-                            Text("Save")
-                                .font(.custom("PixelifySans-Regular", size: device.size.height/16))
-                                .minimumScaleFactor(0.01)
-                                .foregroundColor(.white)
-                        }
+                }
+                .padding(.bottom,device.size.width/60)
+                
+                Button (action: {
+                    player.changeControlType(for: controlType)
+                    presentation.wrappedValue.dismiss()
+                    pause = false
+                }) {
+                    ZStack {
+                        Image("buttonBgWide")
+                            .resizable()
+                        Text("Save")
+                            .font(.custom("PixelifySans-Regular", size: device.size.height/16))
+                            .minimumScaleFactor(0.01)
+                            .foregroundColor(.white)
                     }
-                    .frame(width: device.size.width/2.7, height: device.size.height/7)
-                    
-                }.padding(.leading,device.size.width/3.2)
-                    .padding(.trailing,device.size.width/3.2)
-            }
-        .onAppear() {
-            pause = true
-            print("--------- \(device.size)")
+                }
+                .frame(width: device.size.width/2.7, height: device.size.height/7)
+                
+            }.padding(.leading,device.size.width/3.2)
+                .padding(.trailing,device.size.width/3.2)
         }
+        .onAppear {
+            pause = true
+            volumeMusic = player.volumeMusic
+            volumeEffects = player.volumeEffects
+            controlType = player.controlType
+        }
+        .onChange(of: volumeMusic) { newValue in
+            player.changeVolumeMusic(newVolume: newValue)
+        }
+        .onChange(of: volumeEffects) { newValue in
+            player.changeVolumeEffects(newVolume: newValue)
+        }
+        
     }
     init() {
         let cfURL = Bundle.main.url(forResource: "PixelifySans-Regular", withExtension: "otf")! as CFURL
-
+        
         CTFontManagerRegisterFontsForURL(cfURL, CTFontManagerScope.process, nil)
     }
 }
