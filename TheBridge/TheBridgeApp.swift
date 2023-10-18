@@ -11,12 +11,25 @@ import SwiftUI
 struct TheBridgeApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                StartView()
+            ZStack {
+                HomeButtonHiden
+                NavigationView {
+                    StartView()
+                }
+                .navigationViewStyle(.stack)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .onAppear { Player().setupPlayer() }
             }
-            .navigationViewStyle(.stack)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .persistentSystemOverlays(.hidden)
+        }
+    }
+}
+
+extension TheBridgeApp {
+//  Gambs to Hide the Home button in the app
+    var HomeButtonHiden: some View {
+        ZStack { Text("")
+        if #available(iOS 16.0, *) { Text("")
+                    .persistentSystemOverlays(.hidden) }
         }
     }
 }

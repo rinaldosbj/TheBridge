@@ -1,0 +1,70 @@
+/* 
+  Localizable.strings
+  TheBridge
+
+  Created by rsbj on 16/09/23.
+  
+*/
+
+"Background sounds" = "Background sounds";
+"Sound effects" = "Sound effects";
+"Credits" = "Credits";
+"Hello!" = "Hello!";
+"Start" = "Start";
+"Continue" = "Continue";
+"Restart" = "Restart";
+"Save" = "Save";
+"Back" = "Back";
+"Back to Menu" = "Back to Menu";
+"Buttons" = "Buttons";
+"Chapter 1" = "Chapter 1";
+"The cave" = "The cave";
+"field" = "The field";
+"Chapter 2" = "Chapter 2";
+"Chapter 3" = "Chapter 3";
+"coming soon..." = "coming soon...";
+"This is the story of this person." = "This is the story of this person.";
+"Person?" = "Person?";
+"Well, I'm not sure how to define IT." = "Well, I'm not sure how to define IT.";
+"Anyway..." = "Anyway...";
+"Everything was all very dark." = "Everything was all very dark.";
+"What a scary place..." = "What a scary place...";
+"How scary!" = "How scary!";
+"At least that will keep IT warm." = "At least that will keep IT warm.";
+"Look! There's more than just darkness." = "Look! There's more than just darkness.";
+"IT is going really well!" = "IT is going really well!";
+"Apparently, there was nothing to fear." = "Apparently, there was nothing to fear.";
+"IT is almost there!" = "IT is almost there!";
+"Finally!" = "Finally!";
+"IT reached the top" = "IT reached the top";
+"Noooo!" = "Noooo!";
+"Ouch!" = "Ouch!";
+"That hurts a lot!" = "That hurts a lot!";
+"IT's hurt." = "IT's hurt.";
+"IT was so close!" = "IT was so close!";
+"IT's back where it started." = "IT's back where it started.";
+"It's not fair, IT didn't deserve this" = "It's not fair, IT didn't deserve this";
+"IT thinks about giving up." = "IT thinks about giving up.";
+"Wait a minute!" = "Wait a minute!";
+"IT may be in the same place where he started..." = "IT may be in the same place where he started...";
+"The surroundings are the same." = "The surroundings are the same.";
+"But he's not the same anymore!" = "But he's not the same anymore!";
+"HE changed!" = "HE changed!";
+"HE has grown!" = "HE has grown!";
+"HE learned!" = "HE learned!";
+"HE can do it!" = "HE can do it!";
+"HE feels motivated now!" = "HE feels motivated now!";
+"Wow!" = "Wow!";
+"The energy coming from him can transform the environment!" = "The energy coming from him can transform the environment!";
+"He looks back on all he's been through." = "He looks back on all he's been through.";
+"He feels satisfied now." = "He feels satisfied now.";
+"After everything he learned, he can do anything." = "After everything he learned, he can do anything.";
+"Help" = "Help";
+"Help_label" = "The Bridge is a platform game.\nIn the settings screen you can choose one of the control types, Buttons (recommended for IPad) or Joystick (recommended for IPhone or Mac).To advance in the game just go up in the direction of the signs, enjoy the process.";
+"Creator" = "• Creation, Development and Art by Rinaldo da Silva Bento Junior";
+"SoundDesign" = "• Sound efects by Helton Yan from itch.io";
+"Font" = "• Custom font: PixelifySans-Regular by Stefie";
+"License" = "  Show license ↓";
+"Credits" = "Credits";
+"Considerations" = "Considerations";
+"Declaration" = "I would like to express my immense satisfaction in creating this game. Delivering it in such a short time and with so little experience required a lot of effort and dedication.\nWell, my name is Rinaldo Junior, I am neither a designer nor an experienced programmer, but like the character, I am on a journey of transformation. Throughout my life, I have faced many obstacles. Coming from a family without many privileges, I had a lot of difficulty accessing a good education. After much effort and determination, both from me and my family, I managed to get into university, which was a great achievement. But after a while, I realized that what I was doing was not what I wanted. I was no longer enjoying the course; it was nothing like I had imagined, and I seriously thought about giving up.\nHowever, last year when I entered the Apple Developer Academy, I discovered my passion for coding. It was difficult, but with each attempt, I realized that it was really for me; it was what I wanted to do. At the beginning of this year, after much thought, I finally gathered the courage to start over. After more than three years of studying Production Engineering, I talked to my family, dropped out of the course, and started my journey in Computer Science, my passion. It was a turning point, and now I feel like I am on the right path! I feel like I have found myself again.\nWhen I heard about the Student Challenge, I saw the opportunity to tell my story. I had the idea, but the problem was that I had never created a game on my own. I even dabbled in drawing pixel art characters, but I had never done anything on such a large scale and with so little time. But again, I gathered my strength and decided that I would not be satisfied until I delivered this game. It was really a huge mountain to climb, but it did not discourage me. After all, how many mountains have I already climbed?";

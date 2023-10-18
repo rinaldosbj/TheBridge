@@ -1,0 +1,70 @@
+/* 
+  Localizable.strings
+  TheBridge
+
+  Created by rsbj on 16/09/23.
+  
+*/
+
+"Background sounds" = "Som de fundo";
+"Sound effects" = "Efeitos";
+"Credits" = "Creditos";
+"Hello!" = "Olá!";
+"Start" = "Jogar";
+"Continue" = "Continuar";
+"Restart" = "Reiniciar";
+"Save" = "Salvar";
+"Back" = "Voltar";
+"Back to Menu" = "Voltar para o Menu";
+"Buttons" = "Botão";
+"Chapter 1" = "Capítulo 1";
+"The cave" = "A caverna";
+"field" = "O campo";
+"Chapter 2" = "Capítulo 2";
+"Chapter 3" = "Capítulo 3";
+"coming soon..." = "em breve...";
+"This is the story of this person." = "Essa é a história dessa pessoa";
+"Person?" = "Pessoa?";
+"Well, I'm not sure how to define IT." = "Bem, eu não sei muito bem como defini-lo";
+"Anyway..." = "eh, então...";
+"Everything was all very dark." = "Tudo estava escuro.";
+"What a scary place..." = "Que lugar assustador...";
+"How scary!" = "Que medo!";
+"At least that will keep IT warm." = "Pelo menos isso vai deixa-lo mais quentinho.";
+"Look! There's more than just darkness." = "Olha! Existe mais do que só escuridão.";
+"IT is going really well!" = "Está indo bem!";
+"Apparently, there was nothing to fear." = "Aparentemente, não há nada a temer.";
+"IT is almost there!" = "Esrá quase lá!";
+"Finally!" = "Finalmente!";
+"IT reached the top" = "Chegou ao topo";
+"Noooo!" = "Nãooo!";
+"Ouch!" = "ai!";
+"That hurts a lot!" = "Essa doeu!";
+"IT's hurt." = "Está machucado.";
+"IT was so close!" = "Estava tão perto!";
+"IT's back where it started." = "Está de volta onde começou.";
+"It's not fair, IT didn't deserve this" = "Não é justo, não merecia isso";
+"IT thinks about giving up." = "Ele pensa em desistir.";
+"Wait a minute!" = "Pera aí!";
+"IT may be in the same place where he started..." = "Ele pode estar no mesmo lugar que começou...";
+"The surroundings are the same." = "O ambiente é o mesmo.";
+"But he's not the same anymore!" = "Mas ele não é!";
+"HE changed!" = "Ele mudou!";
+"HE has grown!" = "Ele cresceu!";
+"HE learned!" = "Ele aprendeu!";
+"HE can do it!" = "Ele CONSEGUE!";
+"HE feels motivated now!" = "Ele agora se sente motivado!";
+"Wow!" = "Uau!";
+"The energy coming from him can transform the environment!" = "A energia que emana dele pode transformar o ambiente!";
+"He looks back on all he's been through." = "Ele olha para tudo que passou.";
+"He feels satisfied now." = "e se sente satisfeito.";
+"After everything he learned, he can do anything." = "Despois de tudo que aprendeu ele pode fazer qualquer coisa.";
+"Help" = "Ajuda";
+"Help_label" = "The Bridge é um jogo de plataforma.\nNa tela de configurações, você pode escolher um dos tipos de controle, Botões (recomendado para iPad) ou Joystick (recomendado para iPhone ou Mac).\nPara avançar no jogo, basta subir na direção das placas; aproveite o processo.";
+"Creator" = "• Criação, Desenvolvimento e Arte por Rinaldo da Silva Bento Junior";
+"SoundDesign" = "• Efeitos sonoros por Helton Yan do itch.io";
+"Font" = "• Fonte personalizada: PixelifySans-Regular por Stefie";
+"License" = "   Mostrar licença ↓";
+"Credits" = "Créditos";
+"Considerations" = "Considerações";
+"Declaration" = "Eu gostaria de expressar minha imensa satisfação em criar este jogo. Entregá-lo em tão pouco tempo e com tão pouca experiência exigiu muito esforço e dedicação.\nBem, meu nome é Rinaldo Junior, não sou designer nem um programador experiente, mas, como o personagem, estou em uma jornada de transformação. Ao longo da minha vida, enfrentei muitos obstáculos. Vindo de uma família com poucos privilégios, tive muita dificuldade para ter acesso a uma boa educação. Depois de muito esforço e determinação, tanto da minha parte quanto da minha família, consegui entrar na universidade, o que foi uma grande conquista. Mas, depois de um tempo, percebi que o que estava fazendo não era o que eu queria, já não estava gostando do curso, não era nada do que eu imaginava, e realmente pensei em desistir.\nNo entanto, no ano passado, quando entrei na Apple Developer Academy, descobri minha paixão pela programação. Foi difícil, mas a cada tentativa, percebi que era realmente para mim, era o que eu queria fazer. No início deste ano, depois de muita reflexão, finalmente reuni coragem para recomeçar. Depois de mais de três anos estudando Engenharia de Produção, conversei com minha família, larguei o curso e iniciei minha jornada em Ciência da Computação, minha paixão. Foi um ponto de virada, e agora sinto que estou no caminho certo! Sinto que me encontrei novamente.\nQuando ouvi falar do Student Challenge, vi a oportunidade de contar minha história. Eu tinha a ideia, mas o problema era que nunca havia criado um jogo sozinho. Até brinquei com a criação de personagens de pixel art, mas nunca havia feito algo em uma escala tão grande e com tão pouco tempo. Mas novamente, reuni forças e decidi que não ficaria satisfeito até entregar este jogo. Foi realmente uma montanha enorme para escalar, mas isso não me desanimou. Afinal, quantas montanhas já subi até agora?";
