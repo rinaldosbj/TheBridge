@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct StartView: View {
-    @AppStorage("finishedChapter1") var finishedChapter1: Bool = false // will be substituted for chapter in player
 
-    @State var showEpsode1 = false // will be substituted for chapter in player
-    @State var showEpsode2 = false // will be substituted for chapter in player
+    @State var showGame = false
     
     var device = Device.shared
     var player = Player.shared
+    
+    @AppStorage("chapter") var playerChapter = Player.shared.chapter
     
     var body: some View {
         // if IPad has the current version updated
@@ -29,21 +29,20 @@ struct StartView: View {
                     
                     HStack {
                         
-                        if finishedChapter1 {
+                        if playerChapter != 1 {
                             Spacer()
                             .frame(width: geo.size.width/14, height: geo.size.height/10)
                             .frame(minWidth: 70, minHeight: 70)
                         }
                         
                         Button(action: {
-                            if finishedChapter1 { showEpsode2 = true }
-                            else { showEpsode1 = true }
+                            showGame = true
                         },label: {
                             ZStack {
                                 Image("buttonBgWide")
                                     .resizable()
                                     .frame(minWidth: 350, minHeight: 70)
-                                if finishedChapter1 {
+                                if playerChapter != 1 {
                                     Text("Continue")
                                         .font(.custom("PixelifySans-Regular", size: geo.size.height/12))
                                         .minimumScaleFactor(0.01)
@@ -59,9 +58,9 @@ struct StartView: View {
                         .frame(width: geo.size.width/2.7, height: geo.size.height/7)
                         .frame(minWidth: 350, minHeight: 70)
                         
-                        if finishedChapter1 {
+                        if playerChapter != 1 {
                             Button(action: {
-                                finishedChapter1 = false
+                                player.resetChapters()
                             }, label: {
                                 ZStack {
                                     Image("buttonBgDisable")
@@ -125,15 +124,13 @@ struct StartView: View {
                     Spacer()
                 }
             }
-            .fullScreenCover(isPresented: $showEpsode1, onDismiss: {showEpsode1 = false}, content: {
-                // will change depending of the chapter in player
-                ContentView1()
-            })
-            .fullScreenCover(isPresented: $showEpsode2, onDismiss: {showEpsode2 = false}, content: {
-                ContentView2()
-            })
-            .onChange(of: finishedChapter1, perform: { newValue in
-                if newValue { showEpsode2 = true }
+            .fullScreenCover(isPresented: $showGame, onDismiss: {showGame = false}, content: {
+                switch playerChapter {
+                case 2:
+                    ContentView2()
+                default:
+                    ContentView1()
+                }
             })
             .onAppear() {
                 player.unpaused()

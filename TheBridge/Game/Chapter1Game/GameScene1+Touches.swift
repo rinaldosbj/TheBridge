@@ -14,7 +14,8 @@ extension GameScene1{
                 SKTexture(imageNamed: "player\(clothes).run.left.f2")]
             
             let location = touch.location(in: self)
-            
+            let touchedNode = atPoint(location)
+            let nodeName = touchedNode.name
             
             if textDidHappened {
                 if isNotHappeningAnimation {
@@ -67,8 +68,8 @@ extension GameScene1{
                 }
             }
             else {
-                if gameStarted {
-                    textNumber += 1
+                if gameStarted  {
+                    if nodeName == "textNode" { textNumber += 1 }
                 }
             }
         }

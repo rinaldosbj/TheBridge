@@ -94,7 +94,6 @@ class GameScene1: SKScene, SKPhysicsContactDelegate {
     var whiteBall2 = SKSpriteNode(imageNamed: "circle")
     var whiteBall3 = SKSpriteNode(imageNamed: "circle")
     var whiteBall4 = SKSpriteNode(imageNamed: "circle")
-    @AppStorage("finishedChapter1") var finishedChapter1: Bool = false
     var backgroundAtlas = [0,1,1,1,1,21,1,1,4,24,21]
     var backgroundTexture: [SKTexture]?
     var animationHappend = false

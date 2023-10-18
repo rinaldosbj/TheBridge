@@ -3,8 +3,6 @@ import SpriteKit
 
 struct ContentView2: View {
     
-    @AppStorage("showCredit") var showCredit: Bool = false
-    
     @State var showChapter1 = true
     @State var text1 = StringsConstants().TITLECHAPTER2
     @State var text1Animation = false
@@ -46,9 +44,6 @@ struct ContentView2: View {
                 
                 if showPauseView {
                     PausedView(showPauseView: $showPauseView)
-                }
-                if showCredit {
-                    credits
                 }
                 
             }

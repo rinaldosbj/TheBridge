@@ -33,6 +33,8 @@ class Player {
         if !didPlayerSetup {
             changeVolumeMusic(newVolume: 0.5)
             changeVolumeEffects(newVolume: 0.5)
+            goToNextChapter()
+            changeControlType(for: .Button)
             defaults.set(true, forKey: Constants.setup)
         }
     }
@@ -44,6 +46,10 @@ class Player {
     func goToNextChapter() {
         let nextChapter = defaults.integer(forKey: Constants.chapter) + 1
         defaults.set(nextChapter, forKey: Constants.chapter)
+    }
+    
+    func resetChapters() {
+        defaults.set(1, forKey: Constants.chapter)
     }
     
     var isPaused: Bool = false

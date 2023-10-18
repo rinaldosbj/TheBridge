@@ -3,8 +3,6 @@ import SpriteKit
 
 struct ContentView1: View {
     
-    @AppStorage("finishedChapter1") var finishedChapter1: Bool = false
-    
     @State var showChapter1 = true
     @State var title = StringsConstants().TITLECHAPTER1
     @State var text1Animation = false
@@ -51,9 +49,6 @@ struct ContentView1: View {
                 if showPauseView {
                     PausedView(showPauseView: $showPauseView)
                 }
-            }
-            .onChange(of: finishedChapter1) { newValue in
-                presentation.wrappedValue.dismiss()
             }
     }
     

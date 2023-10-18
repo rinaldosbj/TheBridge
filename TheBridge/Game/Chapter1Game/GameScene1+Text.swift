@@ -9,6 +9,7 @@ extension GameScene1 {
         textBg?.position = CGPoint(x: self.frame.midX, y: self.frame.maxY - 320)
         textBg?.zPosition = 20
         textBg?.isHidden = true
+        textBg?.name = "textNode"
         addChild(textBg!)
         
         text = SKLabelNode(fontNamed: "PixelifySans-Regular")
@@ -21,6 +22,7 @@ extension GameScene1 {
         text?.lineBreakMode = .byCharWrapping
         text?.verticalAlignmentMode = .center
         text?.isHidden = true
+        text?.name = "textNode"
         if level == 1 && clothes == 1 {
             text?.isHidden = false
 
@@ -32,6 +34,7 @@ extension GameScene1 {
         downButton?.position = CGPoint(x: textBg!.frame.maxX - 100, y: textBg!.frame.minY + 80)
         downButton?.zPosition = 21
         downButton?.isHidden = true
+        downButton?.name = "textNode"
         addChild(downButton!)
     }
 }
