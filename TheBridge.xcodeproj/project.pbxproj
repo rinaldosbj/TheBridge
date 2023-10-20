@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D30BD69A2AE2049C0068D6A3 /* ReviewHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D30BD6992AE2049C0068D6A3 /* ReviewHandler.swift */; };
 		D35F4A752ADD881900D89BE9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4A742ADD881900D89BE9 /* Player.swift */; };
 		D35F4A772ADD8B4A00D89BE9 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35F4A762ADD8B4A00D89BE9 /* Device.swift */; };
 		D365399D2A0181F800AC2CF2 /* TheBridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D365399C2A0181F800AC2CF2 /* TheBridgeApp.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D30BD6992AE2049C0068D6A3 /* ReviewHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewHandler.swift; sourceTree = "<group>"; };
 		D35F4A742ADD881900D89BE9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D35F4A762ADD8B4A00D89BE9 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		D36539992A0181F800AC2CF2 /* TheBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				D36539D32A018DEB00AC2CF2 /* NavigationHelper.swift */,
+				D30BD6992AE2049C0068D6A3 /* ReviewHandler.swift */,
 				D38AABB82AD853B300EB1295 /* StringsConstants.swift */,
 				D35F4A762ADD8B4A00D89BE9 /* Device.swift */,
 				D3C623772AB61B350014F1C9 /* Localizable.strings */,
@@ -399,6 +402,7 @@
 				D36539C52A01850E00AC2CF2 /* GameScene1+Update.swift in Sources */,
 				D36539BA2A01846E00AC2CF2 /* GameScene1+Colisions.swift in Sources */,
 				D365399D2A0181F800AC2CF2 /* TheBridgeApp.swift in Sources */,
+				D30BD69A2AE2049C0068D6A3 /* ReviewHandler.swift in Sources */,
 				D38AABB42AD852E500EB1295 /* ContentView2.swift in Sources */,
 				D35F4A772ADD8B4A00D89BE9 /* Device.swift in Sources */,
 				D36539B12A0183D700AC2CF2 /* SettingsView.swift in Sources */,
@@ -567,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy-rsbj.TheBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -604,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.2.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "br.ufpe.cin.academy-rsbj.TheBridge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
