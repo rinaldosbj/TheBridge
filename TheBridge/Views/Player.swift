@@ -23,6 +23,7 @@ class Player {
         static var volumeMusic = "volumeMusic"
         static var volumeEffects = "volumeEffects"
         static var control = "control"
+        static var review = "review"
     }
     
     var didPlayerSetup: Bool {
@@ -92,4 +93,11 @@ class Player {
         defaults.set(type.rawValue, forKey: Constants.control)
     }
     
+    var didReview: Bool {
+        defaults.bool(forKey: Constants.review)
+    }
+    
+    func userReviewd() {
+        defaults.set(true, forKey: Constants.review)
+    }
 }

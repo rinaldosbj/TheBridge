@@ -55,6 +55,15 @@ struct ContentView2: View {
                 }
                 
             }
+            .onAppear {
+                if player.didReview { /* Player reviewd */ }
+                else {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 7.0) {
+                        ReviewHandler.requestReview()
+                        player.userReviewd()
+                    }
+                }
+            }
     }
     
 }
