@@ -124,6 +124,12 @@ struct StartView: View {
                     Spacer()
                 }
             }
+            .onAppear() {
+                player.unpaused()
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                    device.setSize(width: geo.size.width, heigth: geo.size.height)
+                }
+            }
             .fullScreenCover(isPresented: $showGame, onDismiss: {showGame = false}, content: {
                 switch playerChapter {
                 case 2:
@@ -132,10 +138,6 @@ struct StartView: View {
                     ContentView1()
                 }
             })
-            .onAppear() {
-                player.unpaused()
-                device.setSize(width: geo.size.width, heigth: geo.size.height)
-            }
         }.ignoresSafeArea()
     }
     
